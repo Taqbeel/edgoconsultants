@@ -50,7 +50,7 @@ export default function Mentors() {
             necessary to succeed in today &apos;s competitive job market.
           </Text>
           <Link href="https://wa.me/+929821380110">
-            <Button colorScheme="teal" size="md" leftIcon={<FaWhatsapp />}>
+            <Button bg="#173540" size="md" leftIcon={<FaWhatsapp />}>
               WhatsApp
             </Button>
           </Link>

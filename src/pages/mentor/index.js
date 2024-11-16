@@ -47,7 +47,7 @@ const index = ({ testimonials }) => {
           px={6}
           p={8}
           borderRadius={8}
-          _hover={{ background: "teal.100" }}
+          _hover={{ background: "#F89601", color: 'white' }}
         >
           <Box flexShrink={0}></Box>
           <Box mt={{ base: 6, md: 0 }} ml={{ md: 6 }}>
@@ -74,7 +74,7 @@ const index = ({ testimonials }) => {
               necessary to succeed in today &apos;s competitive job market.
             </Text>
             <Link href="https://wa.me/+929821380110">
-              <Button colorScheme="teal" size="md" leftIcon={<FaWhatsapp />}>
+              <Button bg="#173540" size="md" leftIcon={<FaWhatsapp />}>
                 WhatsApp
               </Button>
             </Link>
