@@ -86,9 +86,9 @@ const NavDrawer = ({ children, pages, path }) => {
             <Center h='100%'
               sx={{ bg: "#173540", p: "0.5rem", gap: "1rem", flexDirection: 'column', justifyContent: 'flex-start' }}>
               <Text sx={{
-                fontSize: '1rem', color: '#F89601',
+                fontSize: '1rem', color: 'white',
                 animation: "scaleAnimation 2s infinite ease-in-out",
-              }}>Enabling every learner to study abroad by simplifying the process throughout their journey.</Text>
+              }}>Streamlining the journey for students to study abroad, empowering them to achieve academic excellence worldwide.</Text>
 
               <Flex gap="6" flexWrap='wrap'>
                 {Images.FLAG.map((f, index) => (

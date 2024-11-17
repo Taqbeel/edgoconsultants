@@ -13,7 +13,7 @@ import Head from "next/head";
 
 const index = ({ testimonials }) => {
   const title =
-    "EdgoConsultants | Rise by Lifting Others! Apply to Dream Universities with Expert Guidance and Support for Free";
+    "Edgo Consultants | Rise by Lifting Others! Apply to Dream Universities with Expert Guidance and Support for Free";
   const description =
     "Get expert guidance and support from accomplished alumni and current students to apply to your dream universities for free. Rise by lifting others with personalized guidance on study abroad, personal growth, and more.";
   const url = "https://www.EdgoConsultants.com";

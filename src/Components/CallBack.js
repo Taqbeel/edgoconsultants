@@ -1,4 +1,5 @@
 import { Images } from "@/Constants";
+import { options } from "@/Constants/Images";
 import {
   Box,
   Button,
@@ -10,15 +11,18 @@ import {
   InputLeftElement,
   Stack,
   Text,
-  Textarea
+  Textarea,
 } from "@chakra-ui/react";
+import { Select } from "chakra-react-select";
 import { useState } from "react";
+import { BiGlobe } from "react-icons/bi";
 import {
   FaCheckCircle,
   FaEnvelope,
   FaPhone,
   FaUser
 } from "react-icons/fa";
+
 
 const CallBack = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -77,7 +81,7 @@ const CallBack = () => {
             fontWeight={"bold"}
             display={{ lg: "none" }}
           >
-            Request Callback from Us
+            Request a free consultation call
           </Text>
 
           <Image src={Images.CALLBACK_ART.default.src} alt="Call Back" />
@@ -120,7 +124,7 @@ const CallBack = () => {
                   fontWeight={"bold"}
                   display={{ base: "none", lg: "block" }}
                 >
-                  Request Callback from Us
+                  Request a free consultation call
                 </Text>
                 <Flex
                   color="red.100"
@@ -128,12 +132,51 @@ const CallBack = () => {
                   alignItems="center"
                   gap="1"
                 >
-                  {" "}
                   {error}
                 </Flex>
+
+                <InputGroup background="white" position='relative' zIndex={1}>
+                  <Select
+                    options={options}
+                    placeholder={
+                      <Flex align="center" gap="2">
+                        <BiGlobe color="#F89601" />
+                        Preferred Country
+                      </Flex>
+                    }
+                    name="preferred_country"
+                    closeMenuOnSelect
+                    isSearchable={false}
+                    chakraStyles={{
+                      container: (provided) => ({
+                        ...provided,
+                        width: "100%",
+                        zIndex: 1, // Ensure the dropdown container has a proper z-index
+                      }),
+                      menu: (provided) => ({
+                        ...provided,
+                        zIndex: 9999, //
+                      }),
+
+                      placeholder: (provided) => ({
+                        ...provided,
+                        display: "flex",
+                        alignItems: "center",
+                        // pl: '5px'
+                      }),
+                      singleValue: (provided) => ({
+                        ...provided,
+                        display: "flex",
+                        alignItems: "center",
+                        // m: 0,
+                        // gap: "8px",
+                      }),
+                    }}
+                  />
+                </InputGroup>
                 <InputGroup background={"white"}>
                   <InputLeftElement pointerEvents="none" color="blue.700">
-                    <FaUser />
+                    <FaUser color="#F89601" />
                   </InputLeftElement>
                   <Input
                     type="text"
@@ -144,7 +187,7 @@ const CallBack = () => {
                 </InputGroup>
                 <InputGroup background={"white"}>
                   <InputLeftElement pointerEvents="none" color="blue.700">
-                    <FaPhone />
+                    <FaPhone color="#F89601" />
                   </InputLeftElement>
                   <Input
                     type="tel"
@@ -155,7 +198,7 @@ const CallBack = () => {
                 </InputGroup>
                 <InputGroup background={"white"}>
                   <InputLeftElement pointerEvents="none" color="blue.700">
-                    <FaEnvelope />
+                    <FaEnvelope color="#F89601" />
                   </InputLeftElement>
                   <Input
                     type="email"
@@ -164,6 +207,7 @@ const CallBack = () => {
                     required
                   />
                 </InputGroup>
+
                 <InputGroup background={"white"}>
                   <Textarea
                     type="text"

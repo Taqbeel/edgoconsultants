@@ -1,4 +1,5 @@
 import { Images } from "@/Constants";
+import { options } from "@/Constants/Images";
 import {
   Box,
   Button,
@@ -12,6 +13,7 @@ import {
   Text,
   Textarea
 } from "@chakra-ui/react";
+import { Select } from "chakra-react-select";
 import Head from "next/head";
 import { useState } from "react";
 import {
@@ -24,6 +26,7 @@ import {
   AiOutlineWhatsApp,
   AiOutlineYoutube,
 } from "react-icons/ai";
+import { BiGlobe } from "react-icons/bi";
 import {
   FaCheckCircle,
   FaEnvelope,
@@ -100,14 +103,14 @@ const Contacts = () => {
     // }
   };
 
-  const title = "Contact Us | EdgoConsultants";
+  const title = "Contact Us | Edgo Consultants";
   const description =
-    "Get in touch with EdgoConsultants to apply to your dream universities. Our expert guidance and support from accomplished alumni and current students can help you get accepted. Contact us for free personalized guidance and counseling..";
+    "Get in touch with Edgo Consultants to apply to your dream universities. Our expert guidance and support from accomplished alumni and current students can help you get accepted. Contact us for free personalized guidance and counseling..";
   const url = "https://www.EdgoConsultants.com/contacts";
   const image = `${process.env.ENDPOINT}/home.jpg`;
 
   const keywords =
-    "EdgoConsultants Contact, study abroad, personal guidance, free guidance, free counseling, free courses, apply to universities";
+    "Edgo Consultants Contact, study abroad, personal guidance, free guidance, free counseling, free courses, apply to universities";
   const twitterHandle = "@EdgoConsultants";
 
   return (
@@ -237,12 +240,50 @@ const Contacts = () => {
                   Contact Us
                 </Text>
                 <Flex color="red" fontSize={[14]} alignItems="center" gap="1">
-                  {" "}
                   {error}
                 </Flex>
+                <InputGroup background="white" position='relative' zIndex={1}>
+                  <Select
+                    options={options}
+                    placeholder={
+                      <Flex align="center" gap="2">
+                        <BiGlobe color="#F89601" />
+                        Preferred Country
+                      </Flex>
+                    }
+                    name="preferred_country"
+                    closeMenuOnSelect
+                    isSearchable={false}
+                    chakraStyles={{
+                      container: (provided) => ({
+                        ...provided,
+                        width: "100%",
+                        zIndex: 1, // Ensure the dropdown container has a proper z-index
+                      }),
+                      menu: (provided) => ({
+                        ...provided,
+                        zIndex: 9999, //
+                      }),
+
+                      placeholder: (provided) => ({
+                        ...provided,
+                        display: "flex",
+                        alignItems: "center",
+                        // pl: '5px'
+                      }),
+                      singleValue: (provided) => ({
+                        ...provided,
+                        display: "flex",
+                        alignItems: "center",
+                        // m: 0,
+                        // gap: "8px",
+                      }),
+                    }}
+                  />
+                </InputGroup>
                 <InputGroup background={"white"}>
                   <InputLeftElement pointerEvents="none" color="blue.700">
-                    <FaUser />
+                    <FaUser color="#F89601" />
                   </InputLeftElement>
                   <Input
                     type="text"
@@ -253,7 +294,7 @@ const Contacts = () => {
                 </InputGroup>
                 <InputGroup background={"white"}>
                   <InputLeftElement pointerEvents="none" color="blue.700">
-                    <FaPhone />
+                    <FaPhone color="#F89601" />
                   </InputLeftElement>
                   <Input
                     type="tel"
@@ -264,7 +305,7 @@ const Contacts = () => {
                 </InputGroup>
                 <InputGroup background={"white"}>
                   <InputLeftElement pointerEvents="none" color="blue.700">
-                    <FaEnvelope />
+                    <FaEnvelope color="#F89601" />
                   </InputLeftElement>
                   <Input
                     type="email"

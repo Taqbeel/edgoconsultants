@@ -18,9 +18,9 @@ import {
 import Head from "next/head";
 import { AiOutlineAim, AiOutlineEye } from "react-icons/ai";
 const about = ({ testimonials }) => {
-  const title = "About Us | EdgoConsultants";
+  const title = "About Us | Edgo Consultants";
   const description =
-    "Learn more about EdgoConsultants and our mission to help students apply to their dream universities with expert guidance and support from accomplished alumni and current students. Discover our free personalized counseling and courses today.";
+    "Learn more about Edgo Consultants and our mission to help students apply to their dream universities with expert guidance and support from accomplished alumni and current students. Discover our free personalized counseling and courses today.";
   const keywords =
     "study abroad, personal guidance, free guidance, free counseling, free courses, apply to universities";
   const url = "https://www.EdgoConsultants.com/contacts";
@@ -55,51 +55,47 @@ const about = ({ testimonials }) => {
           fontSize={["22", "24", "28"]}
           as={"h2"}
         >
-          Introducing EdgoConsultants
+          Introducing Edgo Consultants
         </Heading>
 
         <Stack mt="5" spacing={4} fontWeight="light">
           <Text fontSize="lg">
-            Welcome to EdgoConsultants! Are you ready to go on a courageous,
-            self-discovering, empowering journey with EdgoConsultants?
+            Welcome to Edgo Consultants! Are you ready to go on a courageous,
+            self-discovering, empowering journey with Edgo Consultants?
           </Text>
           <Text fontWeight="normal">
-            We are a non-profit organization that provides free guidance and
-            support to students seeking to study abroad. Our mission is to help
-            every student achieve their full potential by providing them with
-            the resources and mentorship they need to pursue their education and
-            career goals on an international level.
+            Start your transformative educational journey with us. Our expert consultancy services guide you through international academic opportunities, turning your dreams of studying abroad into reality. From choosing the ideal institution to managing all the necessary paperwork, we’re here to support you at every stage. Trust us to elevate your academic journey across borders.
             <br />
-            We understand that the process of applying to study abroad programs
-            can be daunting and complex, which is why we are here to help. Our
-            team of experienced mentors and counselors are dedicated to
-            providing personalized guidance and support to each and every
-            student we work with.
             <br />
-            At EdgoConsultants, we believe that everyone deserves access to
-            international education, regardless of their background or financial
-            situation. That{"'"}s why all of our services are completely free of
-            charge. We rely on donations from generous individuals and
-            organizations to keep our services running and to ensure that we can
-            continue to help students for years to come.
+            We offer free guidance and support to students aspiring to study abroad. Our mission is to empower each student to reach their full potential by providing the resources and mentorship necessary to pursue their educational and career goals globally.
             <br />
-            Our approach is centered around the idea that every student is
-            unique and requires individualized attention. We work closely with
-            each student to assess their needs, interests, and goals, and then
-            match them with a mentor who can provide personalized guidance and
-            support throughout the entire application process.
             <br />
-            We are committed to providing our students with a comprehensive and
-            holistic approach to studying abroad. We believe that a successful
-            study abroad experience is about more than just grades and test
-            scores. It{"'"}s about finding the right fit for each individual
-            student, both academically and personally.
+            We recognize that the application process for study abroad programs can be overwhelming and complex, which is why we are here to assist. Our team of experienced mentors and counselors is committed to offering personalized guidance and support to each student throughout their journey. At Edgo Consultants, we believe that everyone should have access to international education, regardless of their background or financial circumstances. That’s why we offer all of our services completely free of charge. Our operations are supported by the generosity of individuals and organizations, enabling us to continue helping students for years to come.
             <br />
-            At EdgoConsultants, we are passionate about helping students realize
-            their full potential and achieve their dreams on an international
-            level. We are committed to providing free, high-quality guidance and
-            support to every student who seeks our help. Join us on this journey
-            and let us help you take the leap towards your future.
+            <br />
+            Our approach is built on the understanding that each student is unique and deserves personalized attention. We work closely with every student to understand their needs, interests, and goals, and then connect them with a mentor who provides tailored guidance throughout the application process.
+            <br />
+            <br />
+            We are dedicated to offering a comprehensive, holistic approach to studying abroad. For us, a successful study abroad experience goes beyond academic achievements and test scores—it’s about finding the best fit for each student, both academically and personally.
+            <br />
+            <br />
+            At Edgo Consultants, we are passionate about empowering students to reach their full potential and achieve their dreams on a global scale. We are committed to providing high-quality, free guidance and support to every student who seeks our assistance. Join us on this journey and let us help you take the next step toward your future.
+          </Text>
+        </Stack>
+      </Container>
+      <Container py="16" px={[4, 4]} maxW={["100vw", "100vw", "70vw"]}>
+        <Heading
+          textAlign={"center"}
+          fontWeight={"bold"}
+          fontSize={["22", "24", "28"]}
+          as={"h2"}
+        >
+          Philosophy
+        </Heading>
+
+        <Stack mt="5" spacing={4} fontWeight="light">
+          <Text fontWeight="normal">
+            Our approach is centered on providing exceptional services to students, ensuring that they not only receive the best guidance at affordable prices but also gain access to international educational opportunities. We are committed to offering tailored advice that helps students navigate the complexities of studying abroad, guiding them to the right institutions that align with their academic and personal aspirations. Our philosophy goes beyond just securing admissions; we aim to equip students with the knowledge and support needed to thrive in a global academic environment. By focusing on affordability, expert advice, and a seamless experience, we empower students to embrace a transformative international education that enriches their lives both academically and personally.            <br />
           </Text>
         </Stack>
       </Container>
@@ -150,9 +146,7 @@ const about = ({ testimonials }) => {
                 Mission
               </Text>
               <Text fontWeight="light" fontSize={16}>
-                Studying abroad should not be complex and costly. Enabling more
-                students to study abroad by accelerating their path to success
-                in universities abroad.
+                Our mission is to deliver professional, thoughtful, and compassionate services to students aspiring to study abroad. We are dedicated to providing expert guidance and unwavering support to both students and their families, ensuring the successful realization of their academic and personal goals on the global stage.
               </Text>
             </Flex>
           </Box>
@@ -183,11 +177,20 @@ const about = ({ testimonials }) => {
               <Text textAlign={"center"} color="#F89601" fontWeight="semibold" fontSize={22}>
                 Vision
               </Text>
-              <Text fontWeight="light" fontSize={16}>
-                Studying abroad should not be complex and costly. Enabling more
-                students to study abroad by accelerating their path to success
-                in universities abroad.
-              </Text>
+              <Box as="ol" fontWeight="light" fontSize={16} pl="4" textAlign="left">
+                <Text as="li">
+                  Our goal is to guide students towards the ideal international universities and colleges worldwide.
+                </Text>
+                <Text as="li">
+                  Opening doors to global education and limitless possibilities.
+                </Text>
+                <Text as="li">
+                  Bridging students to top universities around the world.
+                </Text>
+                <Text as="li">
+                  Paving the path to your international academic success.
+                </Text>
+              </Box>
             </Flex>
           </Box>
         </Center>

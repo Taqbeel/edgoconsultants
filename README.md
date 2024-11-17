@@ -1,8 +1,8 @@
 ## EdgoConsultants
 
 Hello Devs,
-Deploying a fresh project EdgoConsultants.
-EdgoConsultants is a consultancy website for students to help them study abroad. This project was built using Next.js, React, Firebase, Mongoose, and Chakra UI technologies.
+Deploying a fresh project Edgo Consultants.
+Edgo Consultants is a consultancy website for students to help them study abroad. This project was built using Next.js, React, Firebase, Mongoose, and Chakra UI technologies.
 
 ## Getting Started
 
@@ -15,7 +15,7 @@ You will need to have Node.js installed on your machine.
 ## Installing
 
 Clone the repository: git clone https://github.com/itzspgautam/EdgoConsultants.git
-Change into the project directory: cd EdgoConsultants
+Change into the project directory: cd Edgo Consultants
 Install the dependencies: npm install
 Running the project
 To run the project locally, run the following command in the project directory: npm run dev

@@ -61,7 +61,7 @@ const index = ({ testimonials }) => {
               Khalid Munawar -Admission Guru
             </Text>
             <Text mb={6} fontSize={{ base: "sm", md: "md" }} color="gray.500">
-              As the Managing Director of EdgoConsultants, I bring over a decade
+              As the Managing Director of Edgo Consultants, I bring over a decade
               of experience in navigating the complex world of international
               admissions and visa applications. With a particular focus on F1
               and H1B visas, I have developed a special expertise in helping

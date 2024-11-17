@@ -94,9 +94,9 @@ const Navbar = () => {
       <Center display={["none", "none", "flex"]}
         sx={{ bg: "#173540", p: "0.5rem", gap: "1rem", flexDirection: 'column' }}>
         <Text sx={{
-          fontSize: '1.2rem', color: '#F89601',
+          fontSize: '1.2rem', color: 'white',
           animation: "scaleAnimation 2s infinite ease-in-out",
-        }}>Enabling every learner to study abroad by simplifying the process throughout their journey.</Text>
+        }}>Streamlining the journey for students to study abroad, empowering them to achieve academic excellence worldwide.</Text>
 
         <Flex gap="6">
           {Images.FLAG.map((f, index) => (

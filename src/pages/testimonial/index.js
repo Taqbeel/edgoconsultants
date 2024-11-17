@@ -3,11 +3,11 @@ import Head from "next/head";
 import "react-multi-carousel/lib/styles.css";
 
 const TestimonialPage = ({ testimonials }) => {
-  const title = "testimonials | EdgoConsultants";
+  const title = "testimonials | Edgo Consultants";
   const description =
-    "See what our students have to say about the free counseling and guidance services provided by EdgoConsultants. Read testimonials from satisfied students and learn how we helped them achieve their educational dreams.";
+    "See what our students have to say about the free counseling and guidance services provided by Edgo Consultants. Read testimonials from satisfied students and learn how we helped them achieve their educational dreams.";
   const keywords =
-    "testimonials, student reviews, EdgoConsultants reviews, counseling, guidance, education, study abroad";
+    "testimonials, student reviews, Edgo Consultants reviews, counseling, guidance, education, study abroad";
   const url = "https://www.EdgoConsultants.com/testimonial";
 
   const image = `${process.env.ENDPOINT}/home.jpg`;

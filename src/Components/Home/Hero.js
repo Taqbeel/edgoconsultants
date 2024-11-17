@@ -57,12 +57,11 @@ const Hero = () => {
           pl={[3, 10, "100px"]}
         >
           <Heading fontSize={[30, 34, 50]} fontWeight={900} color="blue.800">
-            Chase Your Dream
+            Pursue Your Ambitions
             <br /> <span style={{ color: "#F89601" }}>With Us</span>
           </Heading>
           <Text fontSize={[16, 16, 24]} color={"gray.500"}>
-            Apply to your Dream universities, with our expert guidance and
-            support from accomplished alumni and current students.
+            Apply to your dream universities with expert guidance and support from experienced alumni and current students.
           </Text>
           <Flex gap="2" justifyContent={["center", "left"]} mt="2">
             <Link href={"#callback"}>
@@ -74,7 +73,7 @@ const Hero = () => {
                 borderRadius="sm"
               >
                 <MdPhone size={"18"} />
-                &nbsp; Request Call Back
+                &nbsp; Request free consultation call
               </Button>
             </Link>
             <Link href="/mentor">

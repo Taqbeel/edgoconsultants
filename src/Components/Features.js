@@ -1,18 +1,18 @@
+import { Images } from "@/Constants";
 import {
+  Box,
   Container,
-  SimpleGrid,
   Flex,
   Heading,
-  Text,
+  Icon,
+  SimpleGrid,
   Stack,
   StackDivider,
-  Icon,
+  Text,
   useColorModeValue,
-  Box,
 } from "@chakra-ui/react";
-import { IoCalendar, IoEnter, IoPencil } from "react-icons/io5";
-import { Images } from "@/Constants";
 import Image from "next/image";
+import { IoCalendar, IoEnter, IoPencil } from "react-icons/io5";
 
 // interface FeatureProps {
 //   text: string;
@@ -56,7 +56,7 @@ export default function Features() {
             >
               Our Services
             </Text>
-            <Heading fontWeight={"black"}>A Path of Learning</Heading>
+            <Heading fontWeight={"black"}>A pathway to knowledge</Heading>
             <Text color={"gray.500"} fontSize={"lg"}>
               We will ensure that you gain admission to the university that best
               suits your goals and aspirations.
