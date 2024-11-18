@@ -1,9 +1,8 @@
 import {
   Features,
-  HowWeWork,
   Services,
   Testimonial,
-  WhyChooseUs,
+  WhyChooseUs
 } from "@/Components";
 import { Images } from "@/Constants";
 import {
@@ -47,7 +46,7 @@ const about = ({ testimonials }) => {
         <meta name="twitter:image" content={image} />
       </Head>
 
-      <HowWeWork />
+      {/* <HowWeWork /> */}
       <Container py="16" px={[4, 4]} maxW={["100vw", "100vw", "70vw"]}>
         <Heading
           textAlign={"center"}

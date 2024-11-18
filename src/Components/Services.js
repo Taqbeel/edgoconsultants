@@ -1,4 +1,4 @@
-import { Box, SimpleGrid, Icon, Text, Stack, Flex } from "@chakra-ui/react";
+import { Box, Flex, Icon, SimpleGrid, Stack, Text } from "@chakra-ui/react";
 import { FcAcceptDatabase, FcApproval, FcCalendar } from "react-icons/fc";
 
 const Feature = ({ title, text, icon }) => {
@@ -28,23 +28,23 @@ export default function Services() {
       <SimpleGrid columns={{ base: 1, md: 3 }} spacing={10}>
         <Feature
           icon={<Icon as={FcApproval} w={10} h={10} />}
-          title={"Application"}
+          title={"Consultation"}
           text={
-            "We offer a complete service that includes evaluating the student's academic record, establishing reachable goals, advising the student throughout the application process, and advocating for the student. "
+            "Our consultation services are designed to provide you with expert guidance tailored to your academic goals. Whether you need help choosing the right university, course, or country, we offer personalized advice to align your ambitions with the best opportunities. With a focus on your success, we simplify the journey to your dream destination."
           }
         />
         <Feature
           icon={<Icon as={FcAcceptDatabase} w={10} h={10} />}
-          title={"Admission"}
+          title={"Application"}
           text={
-            "We offer a complimentary one-hour service to go over the application process with the student and their family. After this initial consultation, We follow up with the family to recommend an appropriate service for their needs."
+            "Our application services are designed to make the entire process smooth and stress-free. From preparing your documents to submitting your application, we ensure every detail is handled with precision. With our expertise, we help you showcase your strengths to universities, enhancing your chances of success and securing your place in prestigious institutions."
           }
         />
         <Feature
           icon={<Icon as={FcCalendar} w={10} h={10} />}
-          title={"Hourly Consultations"}
+          title={"Admissions"}
           text={
-            "We are available on an hourly basis to give families advice about finding the right college, writing applications, standardized testing, and more."
+            "Our admissions service is designed to streamline the process and ensure you meet all the requirements. From selecting the right program to completing the application forms, we provide expert guidance every step of the way. With our support, you will be one step closer to gaining admission to your dream university."
           }
         />
       </SimpleGrid>

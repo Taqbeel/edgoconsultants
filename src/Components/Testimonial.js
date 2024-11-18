@@ -1,5 +1,4 @@
-import { Avatar, Box, Button, Center, Flex, Text } from "@chakra-ui/react";
-import Link from "next/link";
+import { Avatar, Box, Flex, Text } from "@chakra-ui/react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
@@ -28,30 +27,30 @@ const Testimonial = ({ testimonials, type }) => {
   const cTestimonials = [
     {
       _id: 1,
-      message: 'Thanks to LeapAdmission, I achieved a GMAT score of 720 and received my MBA from UCONN. With their help, I saved 80 lacs in tuition fees and earned 24 lacs as a Graduate Assistant. LeapAdmission was instrumental in my success and I highly recommend their services.',
-      avatarURL: 'https://www.clipartmax.com/png/small/9-97683_free-images-pear-clipart-black-and-white-random-object-battle-royal.png',
-      author: 'Talha Chakwali',
+      message: 'EdGo Consultancy Firm turned my dream of studying in Australia into a reality! Their team provided step-by-step guidance throughout the application process and helped me secure admission to a leading university. Their expertise and unwavering support were truly exceptional. I highly recommend their services!"',
+      avatarURL: 'https://st3.depositphotos.com/9998432/13335/v/450/depositphotos_133352140-stock-illustration-default-placeholder-profile-icon.jpg',
+      author: 'Faisal Adnan',
       description: '(GRE - 327, Master’s of Computer Science at the University of California at Irvine)',
     },
     {
       _id: 2,
-      message: "LeapAdmission's guidance helped me achieve a GRE score of 334/340 and secure admission to the MS in Data Science program at the University of Buffalo. Thank you, LeapAdmission!",
-      avatarURL: 'https://www.pngitem.com/pimgs/m/689-6892366_transparent-random-guy-png-png-download.png',
-      author: 'Saqlain Mushtaq Jhangvi',
+      message: "EdGo's exceptional support helped me secure a scholarship at a top UK university. Their meticulous approach to admissions and visa applications was remarkable. They genuinely go above and beyond to ensure success!",
+      avatarURL: 'https://st3.depositphotos.com/9998432/13335/v/450/depositphotos_133351974-stock-illustration-default-placeholder-woman.jpg',
+      author: 'Alisha Tahir',
       description: '(GRE -334/340, MS In Data Science at the University of Buffalo)',
     },
     {
       _id: 3,
-      message: "Thanks to LeapAdmission, I was able to secure a spot in the MS in Business Analytics program at UTA with 50% scholarships in 2 universities. I'm grateful for the guidance and support that helped me achieve my academic goals.",
-      avatarURL: 'https://www.clipartmax.com/png/middle/333-3336322_random-guy-calls-me-cute-gt-random-cartoon-guy-png.png',
-      author: 'Abu Bakr Talagangi',
+      message: "EdGo Consultancy Firm is the best decision I made for my higher education. They simplified the complex process of applying to international universities and provided excellent support throughout. Their dedication is commendable!",
+      avatarURL: 'https://st3.depositphotos.com/9998432/13335/v/450/depositphotos_133352140-stock-illustration-default-placeholder-profile-icon.jpg',
+      author: 'Waqas Ahmed',
       description: '(MS in Business Analytics at UTA, Secured 50% scholarships in 2 Universities)',
     },
     {
       _id: 4,
-      message: "I highly recommend LeapAdmisson as your admission Guru. I worked with Nilesh, He prioritizes the needs and goals of his students, providing personalized guidance and support. Nilesh helped me secure my MBA with a full merit scholarship and Graduate Assistantship at the University of Connecticut School of Business, crafting my statement of purpose and letter of recommendation to perfection. He is knowledgeable, professional, and genuinely dedicated to helping his clients succeed. Unlike other consultancies where they will send students to the college that consultancies want or they have to pay for consultancies' Marketing spent, Nilesh has integrity and honesty, always making recommendations based on the best interests of his clients. I am grateful for all that he has done for me and he has my highest recommendation. LinkedIn - https://www.linkedin.com/in/udith-ashoka/",
-      avatarURL: 'https://purepng.com/public/uploads/thumbnail//purepng.com-pokemonpokemonpocket-monsterspokemon-franchisefictional-speciesone-pokemonmany-pokemonone-pikachu-1701527784502b6aw5.png',
-      author: 'Abdur Rehman Tarar',
+      message: "I cannot thank EdGo enough for helping me get into my dream university in the UK. The team is professional, knowledgeable, and supportive. They turned a daunting process into a smooth journey.",
+      avatarURL: 'https://st3.depositphotos.com/9998432/13335/v/450/depositphotos_133352140-stock-illustration-default-placeholder-profile-icon.jpg',
+      author: 'Hussain Ali',
       description: '(GMAT - 710, MBA at UCONN) Saved 80 Lacs tuition fees and earned 24 lacs as GA',
     }
   ]
@@ -92,7 +91,7 @@ const Testimonial = ({ testimonials, type }) => {
         swipeable
       >
         {cTestimonials?.map((tsm) => (
-          <Box p="4" key={tsm._id} h={["40vh"]}>
+          <Box p="4" key={tsm._id} h={["25vh"]}>
             <Flex
               justifyContent={"space-between"}
               flexDir="column"
@@ -124,7 +123,7 @@ const Testimonial = ({ testimonials, type }) => {
           </Box>
         ))}
       </Carousel>
-      {type === "static" && (
+      {/* {type === "static" && (
         <Center>
           <Link href="/testimonial">
             <Button size="sm" colorScheme={"whiteAlpha"} variant="ghost">
@@ -132,7 +131,7 @@ const Testimonial = ({ testimonials, type }) => {
             </Button>
           </Link>
         </Center>
-      )}
+      )} */}
     </Box>
   );
 };

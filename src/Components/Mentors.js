@@ -1,11 +1,10 @@
 import {
-  Box, Button, Flex,
+  Box,
+  Flex,
   Heading,
   Image,
   Text
 } from "@chakra-ui/react";
-import Link from "next/link";
-import { FaWhatsapp } from "react-icons/fa";
 
 
 export default function Mentors() {
@@ -37,19 +36,9 @@ export default function Mentors() {
             Khalid Munawar -Admission Guru
           </Text>
           <Text mb={6} fontSize={{ base: "sm", md: "md" }} color="gray.500">
-            As the Managing Director of Edgo Consultants, I bring over a decade
-            of experience in navigating the complex world of international
-            admissions and visa applications. With a particular focus on F1
-            and H1B visas, I have developed a special expertise in helping
-            students and professionals to pursue their goals in the United
-            States.
+            As a CEO of Edgo Consultants, I bring over a decade of experience in navigating the complex world of international admissions and visa applications. My journey has been dedicated to guiding students towards achieving their academic dreams by securing admissions in top universities abroad. With a deep understanding of the process and a passion for excellence, I strive to ensure every student’s success through personalized and professional support.
           </Text>
-          <Text mb={6} fontSize={{ base: "sm", md: "md" }} color="gray.500">
-            Additionally, I have served as a corporate job trainer, equipping
-            aspiring tech professionals with the skills and knowledge
-            necessary to succeed in today &apos;s competitive job market.
-          </Text>
-          <Link href="https://wa.me/+929821380110">
+          {/* <Link href="https://wa.me/+929821380110">
             <Button bg="#173540" size="md" leftIcon={<FaWhatsapp />}>
               WhatsApp
             </Button>
@@ -58,14 +47,14 @@ export default function Mentors() {
             <Button ml={4} size="md">
               Contact
             </Button>
-          </Link>
+          </Link> */}
         </Box>
 
         <Image
           src="https://www.pngitem.com/pimgs/m/632-6321389_random-png-transparent-background-random-image-png-png.png"
           alt="Nilesh Mishra"
           w={{ base: "100%", md: "auto" }}
-          h={{ base: "auto", md: "450px" }}
+          h={{ base: "auto", md: "250px" }}
           objectFit="cover"
           rounded="md"
           shadow="md"

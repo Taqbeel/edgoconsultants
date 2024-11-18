@@ -17,7 +17,8 @@ export const Images = {
   FLAG: ['USA', 'UK', 'Australia', 'New Zealand', 'France', 'Italy', 'Belgium', 'Finland', 'Netherlands', 'China'],
   // FLAG: [1, 2, 3, 4,],
 
-  OUR_STORY: require("../Assets/Images/ourStory.jpg"),
+  // OUR_STORY: require("../Assets/Images/ourStory.jpg"),
+  OUR_STORY: require("../Assets/Images/boy.jpg"),
 
   MISSION_VISSION_BG: require("../Assets/Images/vision-mission-bg.jpg"),
 

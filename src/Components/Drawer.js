@@ -112,7 +112,7 @@ const NavDrawer = ({ children, pages, path }) => {
                         transformOrigin: "left center",
                       }}
                     ></Center>
-                    <Text color="#F89601" fontSize={["xs", "sm", "md"]} sx={{
+                    <Text color="#F89601" fontSize={["xs", "sm", "md"]} fontWeight='bold' sx={{
                       animation: "scaleAnimation 2s infinite ease-in-out",
                     }}>
                       {f}

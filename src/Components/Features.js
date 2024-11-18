@@ -42,7 +42,7 @@ export default function Features() {
   return (
     <Box py="15" bg="blue.100">
       <Container maxW={"5xl"} py={12}>
-        <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
+        <SimpleGrid columns={{ base: 1, md: 2 }} alignItems='center' spacing={10}>
           <Stack spacing={4}>
             <Text
               textTransform={"uppercase"}
@@ -56,10 +56,9 @@ export default function Features() {
             >
               Our Services
             </Text>
-            <Heading fontWeight={"black"}>A pathway to knowledge</Heading>
+            <Heading fontWeight={"black"}>Your Journey, Our Expertise</Heading>
             <Text color={"gray.500"} fontSize={"lg"}>
-              We will ensure that you gain admission to the university that best
-              suits your goals and aspirations.
+              We are committed to securing your admission to a university that perfectly aligns with your goals and aspirations.
             </Text>
             <Stack
               spacing={4}
@@ -72,17 +71,17 @@ export default function Features() {
               <Feature
                 icon={<Icon as={IoPencil} color={"yellow.500"} w={5} h={5} />}
                 iconBg={useColorModeValue("yellow.100", "yellow.900")}
-                text={"Application"}
+                text={"Consultation"}
               />
               <Feature
                 icon={<Icon as={IoEnter} color={"green.500"} w={5} h={5} />}
                 iconBg={useColorModeValue("green.100", "green.900")}
-                text={"Admission"}
+                text={"Application"}
               />
               <Feature
                 icon={<Icon as={IoCalendar} color={"purple.500"} w={5} h={5} />}
                 iconBg={useColorModeValue("purple.100", "purple.900")}
-                text={"Hourly Consultations"}
+                text={"Admissions"}
               />
             </Stack>
           </Stack>
