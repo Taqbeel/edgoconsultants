@@ -14,9 +14,67 @@ import {
   Stack,
   Text
 } from "@chakra-ui/react";
+import { keyframes } from "@emotion/react";
 import Head from "next/head";
+import { useEffect, useRef, useState } from "react";
 import { AiOutlineAim, AiOutlineEye } from "react-icons/ai";
-const about = ({ testimonials }) => {
+
+
+const slideInData = keyframes`
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+`;
+
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+`;
+
+// Animation styles
+const slideInAnimation = `${fadeIn} 2s ease-in`;
+
+
+export default function About() {
+
+  const [isVisible, setIsVisible] = useState(false);
+  const elementRef = useRef(null);
+
+
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    if (elementRef.current) {
+      observer.observe(elementRef.current);
+    }
+
+    return () => {
+      if (elementRef.current) {
+        observer.unobserve(elementRef.current);
+      }
+    };
+  }, []);
+
+
   const title = "About Us | Edgo Consultants";
   const description =
     "Learn more about Edgo Consultants and our mission to help students apply to their dream universities with expert guidance and support from accomplished alumni and current students. Discover our free personalized counseling and courses today.";
@@ -25,6 +83,8 @@ const about = ({ testimonials }) => {
   const url = "https://www.EdgoConsultants.com/contacts";
 
   const image = `${process.env.ENDPOINT}/home.jpg`;
+
+
 
   return (
     <div>
@@ -58,11 +118,18 @@ const about = ({ testimonials }) => {
         </Heading>
 
         <Stack mt="5" spacing={4} fontWeight="light">
-          <Text fontSize="lg">
+          <Text fontSize="lg"
+            ref={elementRef}
+            animation={slideInAnimation}
+            style={{ animationDelay: "0.3s" }}
+          >
             Welcome to Edgo Consultants! Are you ready to go on a courageous,
             self-discovering, empowering journey with Edgo Consultants?
           </Text>
-          <Text fontWeight="normal">
+          <Text fontWeight="normal"
+            ref={elementRef}
+            animation={slideInAnimation}
+            style={{ animationDelay: "0.2s" }}>
             Start your transformative educational journey with us. Our expert consultancy services guide you through international academic opportunities, turning your dreams of studying abroad into reality. From choosing the ideal institution to managing all the necessary paperwork, we’re here to support you at every stage. Trust us to elevate your academic journey across borders.
             <br />
             <br />
@@ -82,22 +149,7 @@ const about = ({ testimonials }) => {
           </Text>
         </Stack>
       </Container>
-      <Container py="16" px={[4, 4]} maxW={["100vw", "100vw", "70vw"]}>
-        <Heading
-          textAlign={"center"}
-          fontWeight={"bold"}
-          fontSize={["22", "24", "28"]}
-          as={"h2"}
-        >
-          Philosophy
-        </Heading>
 
-        <Stack mt="5" spacing={4} fontWeight="light">
-          <Text fontWeight="normal">
-            Our approach is centered on providing exceptional services to students, ensuring that they not only receive the best guidance at affordable prices but also gain access to international educational opportunities. We are committed to offering tailored advice that helps students navigate the complexities of studying abroad, guiding them to the right institutions that align with their academic and personal aspirations. Our philosophy goes beyond just securing admissions; we aim to equip students with the knowledge and support needed to thrive in a global academic environment. By focusing on affordability, expert advice, and a seamless experience, we empower students to embrace a transformative international education that enriches their lives both academically and personally.            <br />
-          </Text>
-        </Stack>
-      </Container>
       <Box
         py="20"
         bg={`url('${Images.MISSION_VISSION_BG.default.src}')`}
@@ -105,8 +157,44 @@ const about = ({ testimonials }) => {
         bgColor="cyan.200"
         bgBlendMode={"soft-light"}
       >
+        <Center gap={[12, 5]} flexDir={["column", "row"]}>
+          <Box
+            bg="white"
+            borderRadius={"md"}
+            p="5"
+            w={["90%", "45%", "62.5%"]}
+            boxShadow="md"
+          >
+            <Flex
+              justifyContent={"center"}
+              alignItems="center"
+              flexDir="column"
+              gap="2"
+            >
+              <Box
+                borderRadius={"full"}
+                bg="white"
+                boxShadow={"md"}
+                p="5"
+                mt="-60px"
+                w="20"
+                h="20"
+              >
+                <AiOutlineAim size="40" color="#F89601" />
+              </Box>
+              <Text textAlign={"center"} color="#F89601" fontWeight="semibold" fontSize={22}>
+                Philosophy
+              </Text>
+              <Text fontWeight="light" fontSize={16} textAlign='center'>
+                Our approach is centered on providing exceptional services to students, ensuring that they not only receive the best guidance at affordable prices but also gain access to international educational opportunities. We are committed to offering tailored advice that helps students navigate the complexities of studying abroad, guiding them to the right institutions that align with their academic and personal aspirations. Our philosophy goes beyond just securing admissions; we aim to equip students with the knowledge and support needed to thrive in a global academic environment. By focusing on affordability, expert advice, and a seamless experience, we empower students to embrace a transformative international education that enriches their lives both academically and personally.            <br />
+              </Text>
+            </Flex>
+          </Box>
+        </Center>
+
+
         <Text
-          pb="20"
+          py="20"
           textAlign={"center"}
           as={"h2"}
           fontSize={[22, 24, 30]}
@@ -116,7 +204,10 @@ const about = ({ testimonials }) => {
         >
           Mission & Vision
         </Text>
+
+
         <Center gap={[12, 5]} flexDir={["column", "row"]}>
+
           <Box
             bg="white"
             borderRadius={"md"}
@@ -155,6 +246,7 @@ const about = ({ testimonials }) => {
             p="5"
             boxShadow="md"
             w={["90%", "45%", "30%"]}
+            h='100%'
           >
             <Flex
               justifyContent={"center"}
@@ -180,7 +272,7 @@ const about = ({ testimonials }) => {
                 <Text as="li">
                   Our goal is to guide students towards the ideal international universities and colleges worldwide.
                 </Text>
-                <Text as="li">
+                {/* <Text as="li">
                   Opening doors to global education and limitless possibilities.
                 </Text>
                 <Text as="li">
@@ -188,7 +280,7 @@ const about = ({ testimonials }) => {
                 </Text>
                 <Text as="li">
                   Paving the path to your international academic success.
-                </Text>
+                </Text> */}
               </Box>
             </Flex>
           </Box>
@@ -197,21 +289,7 @@ const about = ({ testimonials }) => {
       <WhyChooseUs />
       <Features />
       <Services />
-      <Testimonial testimonials={testimonials} type="static" />
+      <Testimonial type="static" />
     </div>
   );
 };
-
-export async function getStaticProps() {
-  // Fetch testimonials using Axios
-  // const response = await axios.get(`${process.env.ENDPOINT}/api/testimonials`);
-  // const testimonials = response.data.testimonials;
-  const testimonials = [];
-  return {
-    props: {
-      testimonials,
-    },
-  };
-}
-
-export default about;

@@ -1,43 +1,47 @@
 import {
   Box,
+  Center,
   Flex,
   Heading,
-  Text,
-  useColorModeValue,
   IconButton,
-  Center,
+  Text,
+  useColorModeValue
 } from "@chakra-ui/react";
 import { useState } from "react";
-import { BiMoney, BiSupport, BiBook, BiTime } from "react-icons/bi";
+import { BsBuilding, BsFillClipboardCheckFill } from "react-icons/bs";
+import { FaHandshake } from "react-icons/fa";
 
 const WhyChooseUsData = [
   {
     _id: "1",
-    title: "Premium Services for Free",
+    title: "30000+",
+    desc: "Students Counselled",
     color: "orange",
-    icon: <BiMoney size="30" />,
+    icon: <FaHandshake size="30" />,
   },
   {
     _id: "2",
-    title: "Your Personalised Admission Guru",
+    title: "25000+",
+    desc: "Students Enrolled",
     color: "green",
-    icon: <BiSupport size="30" />,
+    icon: <BsFillClipboardCheckFill size="30" />,
   },
   {
     _id: "3",
-    title: "Get Insights from the Students and Alumni.",
+    title: "900+",
+    desc: "Universities All Around The Globe",
     color: "purple",
-    icon: <BiBook size="30" />,
+    icon: <BsBuilding size="30" />,
   },
-  {
-    _id: "4",
-    title: "Available Anytime",
-    color: "teal",
-    icon: <BiTime size="30" />,
-  },
+  // {
+  //   _id: "4",
+  //   title: "Available Anytime",
+  //   color: "teal",
+  //   icon: <BiTime size="30" />,
+  // },
 ];
 
-const WhyChooseUsCard = ({ title, color, icon }) => {
+const WhyChooseUsCard = ({ title, desc, color, icon }) => {
   const hoverColor = useColorModeValue(`${color}.600`, `${color}.300`);
 
   const [hovered, setHovered] = useState(false);
@@ -70,9 +74,12 @@ const WhyChooseUsCard = ({ title, color, icon }) => {
         transition="all 0.2s"
         _hover={{ transform: "scale(1.1)" }}
       />
-      <Heading mt={4} fontSize="lg" fontWeight="semibold" textAlign="center">
+      <Heading mt={4} fontSize='3xl' fontWeight="semibold" textAlign="center">
         {title}
       </Heading>
+      <Text fontSize={[12, 12, 18]} textAlign='center' color={"gray.500"}>
+        {desc}
+      </Text>
     </Flex>
   );
 };
@@ -81,10 +88,11 @@ const WhyCooseUs = () => {
   return (
     <Box py={16} display="flex" alignItems={"center"} flexDir="column">
       <Heading textAlign="center" mb={8}>
-        Why Choose Us
+        What sets us apart
       </Heading>
       <Center maxW={["80%"]}>
         <Flex
+          width='75vw'
           direction={{ base: "column", md: "row" }}
           justify="space-around"
           align="center"
@@ -94,6 +102,7 @@ const WhyCooseUs = () => {
             <WhyChooseUsCard
               key={card._id}
               title={card.title}
+              desc={card.desc}
               color={card.color}
               icon={card.icon}
             />

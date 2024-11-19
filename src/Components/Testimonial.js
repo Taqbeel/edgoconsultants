@@ -2,7 +2,7 @@ import { Avatar, Box, Flex, Text } from "@chakra-ui/react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
-const Testimonial = ({ testimonials, type }) => {
+const Testimonial = () => {
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.

@@ -10,6 +10,7 @@ import {
   Stack,
   Text
 } from "@chakra-ui/react";
+import { keyframes } from "@emotion/react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -25,10 +26,36 @@ import NavDrawer from "./Drawer";
 
 const NavPages = [
   { _id: 1, title: "Home", link: "/", icon: <AiOutlineHome /> },
-  { _id: 2, title: "Mentors", link: "/mentor", icon: <AiOutlineInfo /> },
+  { _id: 2, title: "Meet Our Experts", link: "/mentor", icon: <AiOutlineInfo /> },
   { _id: 3, title: "About Us", link: "/about", icon: <AiOutlineInfo /> },
   { _id: 4, title: "Contacts", link: "/contacts", icon: <AiOutlinePhone /> },
 ];
+
+
+const gradientAnimation = keyframes`
+  0% {
+    background: linear-gradient(to right, #17354077, #F8960177);
+    background-size: 200% 100%;
+    background-position: 100% 0;
+  }
+  50% {
+    background: linear-gradient(to right, #F8960177, #17354077);
+    background-size: 200% 100%;
+    background-position: 0% 0;
+  }
+  100% {
+    background: linear-gradient(to right, #17354077, #F8960177);
+    background-size: 200% 100%;
+    background-position: 100% 0;
+  }
+  50% {
+    background: linear-gradient(to right, #F8960177, #17354077);
+    background-size: 200% 100%;
+    background-position: 0% 0;
+  }
+    
+`;
+
 
 const ChildrenList = ({ page }) => {
   const router = useRouter();
@@ -92,7 +119,11 @@ const Navbar = () => {
   return (
     <>
       <Center display={["none", "none", "flex"]}
-        sx={{ bg: "#173540", p: "0.5rem", gap: "1rem", flexDirection: 'column' }}>
+        sx={{
+          bg: "#173540", p: "0.5rem", gap: "1rem", flexDirection: 'column',
+          animation: `${gradientAnimation} 5s linear infinite`,
+
+        }}>
         <Text sx={{
           fontSize: '1.2rem', color: 'white',
           animation: "scaleAnimation 2s infinite ease-in-out",
@@ -120,7 +151,7 @@ const Navbar = () => {
                   transformOrigin: "left center",
                 }}
               ></Center>
-              <Text color="#F89601" fontSize={["xs", "sm", "md"]} fontWeight='bold' sx={{
+              <Text color="white" fontSize={["xs", "sm", "md"]} fontWeight='bold' sx={{
                 animation: "scaleAnimation 2s infinite ease-in-out",
               }}>
                 {f}

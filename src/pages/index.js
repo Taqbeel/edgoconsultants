@@ -7,7 +7,6 @@ import {
   UniversityCarausel,
   WhyChooseUs,
 } from "@/Components";
-import Mentors from "@/Components/Mentors";
 import Head from "next/head";
 
 
@@ -47,25 +46,12 @@ const index = ({ testimonials }) => {
       <Hero />
       <UniversityCarausel />
       <CallBack />
-      <Mentors />
       <WhyChooseUs />
       <Features />
       <Services />
-      <Testimonial testimonials={testimonials} type="static" />
+      <Testimonial type="static" />
     </>
   );
 };
-
-export async function getStaticProps() {
-  // Fetch testimonials using Axios
-  // const response = await axios.get(`${process.env.ENDPOINT}/api/testimonials`);
-  // const testimonials = response.data.testimonials;
-  const testimonials = [];
-  return {
-    props: {
-      testimonials,
-    },
-  };
-}
 
 export default index;

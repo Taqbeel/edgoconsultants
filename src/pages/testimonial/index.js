@@ -30,19 +30,8 @@ const TestimonialPage = ({ testimonials }) => {
     <meta name="twitter:image" content={image} />
   </Head>;
 
-  return <Testimonial testimonials={testimonials} />;
+  return <Testimonial />;
 };
 
-export async function getServerSideProps() {
-  // Fetch testimonials using Axios
-  // const response = await axios.get(`${process.env.ENDPOINT}/api/testimonials`);
-  // const testimonials = response.data.testimonials;
-  const testimonials = [];
-  return {
-    props: {
-      testimonials,
-    },
-  };
-}
 
 export default TestimonialPage;

@@ -56,9 +56,9 @@ const index = ({ testimonials }) => {
               color="gray.700"
               as={"h1"}
             >
-              Khalid Munawar -Admission Guru
+              Khalid Munawar -Message From CEO
             </Text>
-            <Text mb={6} fontSize={{ base: "sm", md: "md" }} color="gray.500">
+            <Text mb={6} fontSize={{ base: "sm", md: "md" }} color="white">
               As a CEO of Edgo Consultants, I bring over a decade of experience in navigating the complex world of international admissions and visa applications. My journey has been dedicated to guiding students towards achieving their academic dreams by securing admissions in top universities abroad. With a deep understanding of the process and a passion for excellence, I strive to ensure every student’s success through personalized and professional support.
             </Text>
             {/* <Link href="https://wa.me/+929821380110">
@@ -98,7 +98,7 @@ const index = ({ testimonials }) => {
         >
           <Box flexShrink={0}>
             <Image
-              src="https://www.pngitem.com/pimgs/m/632-6321389_random-png-transparent-background-random-image-png-png.png"
+              src={require("../../Assets/Images/Team/Bakr.jpeg").default.src}
               alt="Abu Bakr"
               w={{ base: "100%", md: "auto" }}
               h={{ base: "auto", md: "250px" }}
@@ -116,7 +116,7 @@ const index = ({ testimonials }) => {
               color="gray.700"
               as={"h1"}
             >
-              Abu Bakr -Head of Operations UK
+              Abu Bakr -Manager Operations UK
             </Text>
             <Center
               className='element'
@@ -133,6 +133,10 @@ const index = ({ testimonials }) => {
               }}
             >
             </Center>
+
+            <Text mt={6} fontSize={{ base: "sm", md: "md" }} color="white">
+              Muhammad Abu Bakar is the Manager Operations for EDGO in London, driving strategic operations and strengthening the firm&lsquo;s presence in the UK. An LLM graduate from Dundee University with a background in civil, criminal, and family law, he combines his legal expertise with a passion for guiding students. Having navigated the international education process himself, Muhammad understands the unique needs and aspirations of students. He excels in helping them identify universities that align with their goals and enhance their skills, ensuring a smooth and supportive journey. Fluent in English and Urdu, he is dedicated to providing exceptional service to a diverse clientele.
+            </Text>
           </Box>
         </Flex>
 
@@ -150,7 +154,7 @@ const index = ({ testimonials }) => {
         >
           <Box flexShrink={0}>
             <Image
-              src="https://www.pngitem.com/pimgs/m/632-6321389_random-png-transparent-background-random-image-png-png.png"
+              src={require("../../Assets/Images/Team/Ibrar.jpeg").default.src}
               alt="Muhammad Ibrar"
               w={{ base: "100%", md: "auto" }}
               h={{ base: "auto", md: "250px" }}
@@ -168,7 +172,7 @@ const index = ({ testimonials }) => {
               color="gray.700"
               as={"h1"}
             >
-              Muhammad Ibrar -Head of Operations Europe
+              Muhammad Ibrar -Manager Operations Europe
             </Text>
             <Center
               className='element'
@@ -185,6 +189,10 @@ const index = ({ testimonials }) => {
               }}
             >
             </Center>
+
+            <Text mt={6} fontSize={{ base: "sm", md: "md" }} color="white">
+              Muhammad Ibrar Our Manager Operations for Europe is an expert in navigating the diverse education systems across European countries. His insights have empowered countless students to embark on successful academic journeys in Europe.
+            </Text>
           </Box>
         </Flex>
 
@@ -202,7 +210,7 @@ const index = ({ testimonials }) => {
         >
           <Box flexShrink={0}>
             <Image
-              src="https://www.pngitem.com/pimgs/m/632-6321389_random-png-transparent-background-random-image-png-png.png"
+              src={require("../../Assets/Images/Team/Tarar.jpeg").default.src}
               alt="Abdur Rehman"
               w={{ base: "100%", md: "auto" }}
               h={{ base: "auto", md: "250px" }}
@@ -220,7 +228,7 @@ const index = ({ testimonials }) => {
               color="gray.700"
               as={"h1"}
             >
-              Abdur Rehman -Head of Operations Australia
+              Abdur Rehman -Manager Operations Australia
             </Text>
 
             <Center
@@ -238,6 +246,10 @@ const index = ({ testimonials }) => {
               }}
             >
             </Center>
+
+            <Text mt={6} fontSize={{ base: "sm", md: "md" }} color="white">
+              As a Manager Operations for Australia, Abdur Rehman Tarar’s role is pivotal in connecting students with top-ranked Australian institutions. With a strong understanding of the Australian education system, post-study work opportunities, and visa procedures, he provides comprehensive support to ensure students have a stress-free experience.
+            </Text>
           </Box>
         </Flex>
 
@@ -255,7 +267,7 @@ const index = ({ testimonials }) => {
         >
           <Box flexShrink={0}>
             <Image
-              src="https://www.pngitem.com/pimgs/m/632-6321389_random-png-transparent-background-random-image-png-png.png"
+              src={require("../../Assets/Images/Team/Humais.jpeg").default.src}
               alt="Humais Khan"
               w={{ base: "100%", md: "auto" }}
               h={{ base: "auto", md: "250px" }}
@@ -273,7 +285,7 @@ const index = ({ testimonials }) => {
               color="gray.700"
               as={"h1"}
             >
-              Humais Khan -Head of Operations US
+              Humais Khan -Manager Operations US
             </Text>
 
             <Center
@@ -291,6 +303,10 @@ const index = ({ testimonials }) => {
               }}
             >
             </Center>
+
+            <Text mt={6} fontSize={{ base: "sm", md: "md" }} color="white">
+              Humais  Khan is our Manager Operations for the USA. His dedication and tailored advice have helped students secure places in some of the most prestigious institutions in the USA.
+            </Text>
           </Box>
         </Flex>
 
@@ -308,7 +324,7 @@ const index = ({ testimonials }) => {
         >
           <Box flexShrink={0}>
             <Image
-              src="https://www.pngitem.com/pimgs/m/632-6321389_random-png-transparent-background-random-image-png-png.png"
+              src={require("../../Assets/Images/Team/Talha.jpeg").default.src}
               alt="Talha Awan"
               w={{ base: "100%", md: "auto" }}
               h={{ base: "auto", md: "250px" }}
@@ -326,7 +342,7 @@ const index = ({ testimonials }) => {
               color="gray.700"
               as={"h1"}
             >
-              Talha Awan -Head of Operations New Zealand
+              Talha Awan -Manager Operations New Zealand
             </Text>
 
             <Center
@@ -344,6 +360,10 @@ const index = ({ testimonials }) => {
               }}
             >
             </Center>
+
+            <Text mt={6} fontSize={{ base: "sm", md: "md" }} color="white">
+              Talha Awan is our Manager Operations for New Zealand specializes in helping students explore opportunities at top universities in the country. With in-depth knowledge of New Zealand’s educational landscape, visa regulations, and admission requirements, he ensures a seamless process.
+            </Text>
           </Box>
         </Flex>
       </Flex>
@@ -351,21 +371,9 @@ const index = ({ testimonials }) => {
       <CallBack />
       <br />
       <br />
-      <Testimonial testimonials={testimonials} type="static" />
+      <Testimonial type="static" />
     </>
   );
 };
-
-export async function getStaticProps() {
-  // Fetch testimonials using Axios
-  // const response = await axios.get(`${process.env.ENDPOINT}/api/testimonials`);
-  // const testimonials = response.data.testimonials;
-  const testimonials = [];
-  return {
-    props: {
-      testimonials,
-    },
-  };
-}
 
 export default index;
