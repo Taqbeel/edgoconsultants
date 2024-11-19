@@ -10,7 +10,7 @@ import {
   VisuallyHidden,
 } from "@chakra-ui/react";
 import Image from "next/image";
-import { FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 
 const SocialButton = ({ children, label, href }) => {
   return (
@@ -76,7 +76,7 @@ export default function Footer() {
           <Text>© 2022 Edgo Consultants. All rights reserved</Text>
           <Stack direction={"row"} spacing={6}>
             <SocialButton label={"Twitter"} href={"#"}>
-              <FaTwitter />
+              <FaFacebook />
             </SocialButton>
             <SocialButton label={"YouTube"} href={"#"}>
               <FaYoutube />

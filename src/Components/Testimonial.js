@@ -73,7 +73,7 @@ const Testimonial = () => {
         lineHeight={"1"}
         textAlign="center"
       >
-        Testimonials
+        Success Stories
       </Text>
       <Carousel
         additionalTransfrom={0}
@@ -91,7 +91,7 @@ const Testimonial = () => {
         swipeable
       >
         {cTestimonials?.map((tsm) => (
-          <Box p="4" key={tsm._id} h={["25vh"]}>
+          <Box p="4" key={tsm._id} h={["30vh"]}>
             <Flex
               justifyContent={"space-between"}
               flexDir="column"
@@ -100,7 +100,7 @@ const Testimonial = () => {
               h="full"
               borderRadius={"lg"}
             >
-              <Text fontSize={"13"} textColor="whiteAlpha.800" noOfLines={7}>
+              <Text fontSize={"16"} textColor="whiteAlpha.800" noOfLines={7}>
                 <span dangerouslySetInnerHTML={{ __html: tsm.message }} />
               </Text>
               <Flex
