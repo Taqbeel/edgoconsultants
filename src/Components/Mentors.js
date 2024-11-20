@@ -55,6 +55,7 @@ const Mentors = ({ name, img, flag, cntr, desc }) => {
     };
   }, []);
 
+
   return (
     <Flex
       // <Flex
@@ -63,9 +64,9 @@ const Mentors = ({ name, img, flag, cntr, desc }) => {
       ref={elementRef}
       animation={isVisible ? slideInAnimation : "none"}
       animationDelay='0.6s'
-      // transform={isVisible ? "translateX(0)" : "translateX(100%)"}
-      // opacity={isVisible ? 1 : 0}
-      // transition="transform 1s ease, opacity 0./5s ease"
+      transform={isVisible ? "translateX(0)" : "translateX(110%)"}
+      opacity={isVisible ? 1 : 0}
+      transition="transform 1s ease, opacity 0./5s ease"
 
       // style={{ animationDelay: "0.6s" }}
       bg={"gray.100"}
