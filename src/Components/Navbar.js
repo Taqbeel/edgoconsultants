@@ -64,8 +64,9 @@ const ChildrenList = ({ page }) => {
     <>
       {page.hasChildren ? (
         <Popover trigger={"hover"} placement={"bottom-start"}>
-          <PopoverTrigger>
+          <PopoverTrigger >
             <Link href={page.link} style={{ width: "100%" }}>
+
               <Text
                 color={router.asPath === page.link ? '#F89601' : "#173540"}
                 fontWeight={router.asPath === page.link ? "semibold" : ""}
@@ -102,12 +103,26 @@ const ChildrenList = ({ page }) => {
         </Popover>
       ) : (
         <Link href={page.link}>
-          <Text
-            color={router.asPath === page.link ? '#F89601' : "#173540"}
-            fontWeight={router.asPath === page.link ? "semibold" : ""}
+          <Box
+            display="inline-block" // Ensures the Box wraps the Text correctly
+            border="2px solid transparent" // Start with a transparent border
+            borderRadius="md"
+            padding="4px" // Adds space around the text
+            transition="border-color 0.3s ease , padding-inline 0.3s ease" // Smooth border and padding transition
+            _hover={{
+              borderColor: "#F89601", // Change border color on hover
+              paddingInline: "8px", // Optional: Adds padding on hover for better effect
+            }}
           >
-            {page.title}
-          </Text>
+            <Text
+              color={router.asPath === page.link ? '#F89601' : "#173540"}
+              fontWeight={router.asPath === page.link ? "semibold" : ""}
+              transition="color 0.3s ease"
+              _hover={{ color: '#F89601' }}
+            >
+              {page.title}
+            </Text>
+          </Box>
         </Link>
       )}
     </>
