@@ -73,7 +73,7 @@ const Hero = () => {
                 borderRadius="sm"
               >
                 <MdPhone size={"18"} />
-                &nbsp; Request Free Consultation Call
+                &nbsp; Request A Free Consultation Call
               </Button>
             </Link>
             <Link href="/mentor">

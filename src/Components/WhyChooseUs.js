@@ -77,7 +77,7 @@ const WhyChooseUsCard = ({ title, desc, color, icon }) => {
       <Heading mt={4} fontSize='3xl' fontWeight="semibold" textAlign="center">
         {title}
       </Heading>
-      <Text fontSize={[12, 12, 18]} textAlign='center' color={"gray.500"}>
+      <Text fontSize={[12, 12, 18]} textAlign='center' color={hovered ? 'white' : "#173540"}>
         {desc}
       </Text>
     </Flex>
