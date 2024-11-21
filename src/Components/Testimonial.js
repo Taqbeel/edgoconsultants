@@ -91,7 +91,7 @@ const Testimonial = () => {
         swipeable
       >
         {cTestimonials?.map((tsm) => (
-          <Box p="4" key={tsm._id} h={["30vh"]}>
+          <Box p="4" key={tsm._id} h={["35vh"]}>
             <Flex
               justifyContent={"space-between"}
               flexDir="column"
