@@ -13,8 +13,9 @@ import {
   Text,
   Textarea,
 } from "@chakra-ui/react";
+import { keyframes } from "@emotion/react";
 import { Select } from "chakra-react-select";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { BiGlobe } from "react-icons/bi";
 import {
   FaCheckCircle,
@@ -24,10 +25,65 @@ import {
 } from "react-icons/fa";
 
 
+const slideInUp = keyframes`
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+`;
+
+const slideInLeft = keyframes`
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+`;
+
+const slideInUpAnimation = `${slideInUp} 1s ease-out`;
+
+const slideInLeftAnimation = `${slideInLeft} 1s ease-out`;
+
+
 const CallBack = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
   const [status, setStatus] = useState(null);
+
+
+
+  const [isVisible, setIsVisible] = useState(false);
+  const elementRef = useRef(null);
+
+  useEffect(() => {
+    const checkVisibility = () => {
+      if (elementRef.current) {
+        const rect = elementRef.current.getBoundingClientRect();
+        console.log("Bounding Rect:", rect);
+        if (rect.top >= 0 && rect.bottom <= window.innerHeight * 1.5) {
+          setIsVisible(true);
+        }
+      }
+    };
+
+    // Attach to scroll and resize events
+    window.addEventListener("scroll", checkVisibility);
+    window.addEventListener("resize", checkVisibility);
+
+    checkVisibility(); // Check immediately
+
+    return () => {
+      window.removeEventListener("scroll", checkVisibility);
+      window.removeEventListener("resize", checkVisibility);
+    };
+  }, []);
 
   const submitForm = async (e) => {
     // e.preventDefault();
@@ -84,7 +140,13 @@ const CallBack = () => {
             Request a free consultation call
           </Text>
 
-          <Image src={Images.CALLBACK_ART.default.src} alt="Call Back" />
+          <Image
+            ref={elementRef}
+            animation={isVisible ? slideInLeftAnimation : "none"}
+            transform={isVisible ? "translateX(0)" : "translateX(-30%)"}
+            opacity={isVisible ? 1 : 0}
+            transition="transform 1s ease, opacity 0./5s ease"
+            src={Images.CALLBACK_ART.default.src} alt="Call Back" />
         </Center>
         <Box w="100%" p="5" bg="#173540">
           {status === "success" ? (
@@ -114,6 +176,11 @@ const CallBack = () => {
                 p={[2, 5, 10]}
                 justifyContent={"space-evenly"}
                 h="100%"
+                ref={elementRef}
+                animation={isVisible ? slideInUpAnimation : "none"}
+                transform={isVisible ? "translateY(0)" : "translateY(30%)"}
+                opacity={isVisible ? 1 : 0}
+                transition="transform 1s ease, opacity 0./5s ease"
               >
                 <Text
                   align={"center"}

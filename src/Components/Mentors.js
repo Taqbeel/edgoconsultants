@@ -15,15 +15,6 @@ const slideIn = keyframes`
   }
 `;
 
-// const slideIn = keyframes`
-//   from {
-//     opacity: 0;
-//   }
-//   to {
-//     opacity: 1;
-//   }
-// `;
-
 const slideInAnimation = `${slideIn} 1s ease-out`;
 
 const Mentors = ({ name, img, flag, cntr, desc }) => {
@@ -31,44 +22,37 @@ const Mentors = ({ name, img, flag, cntr, desc }) => {
   const [isVisible, setIsVisible] = useState(false);
   const elementRef = useRef(null);
 
-
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setIsVisible(true);
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
+    const checkVisibility = () => {
+      if (elementRef.current) {
+        const rect = elementRef.current.getBoundingClientRect();
+        console.log("Bounding Rect:", rect);
+        if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
+          setIsVisible(true);
+        }
+      }
+    };
 
-    if (elementRef.current) {
-      observer.observe(elementRef.current);
-    }
+    // Attach to scroll and resize events
+    window.addEventListener("scroll", checkVisibility);
+    window.addEventListener("resize", checkVisibility);
+
+    checkVisibility(); // Check immediately
 
     return () => {
-      if (elementRef.current) {
-        observer.unobserve(elementRef.current);
-      }
+      window.removeEventListener("scroll", checkVisibility);
+      window.removeEventListener("resize", checkVisibility);
     };
   }, []);
 
 
   return (
     <Flex
-      // <Flex
-      //   ref={elementRef}
-      //   isVisible={isVisible}
       ref={elementRef}
       animation={isVisible ? slideInAnimation : "none"}
-      animationDelay='0.6s'
       transform={isVisible ? "translateX(0)" : "translateX(110%)"}
       opacity={isVisible ? 1 : 0}
       transition="transform 1s ease, opacity 0./5s ease"
-
-      // style={{ animationDelay: "0.6s" }}
       bg={"gray.100"}
       direction={{ base: "column", md: "row" }}
       align={{ base: "center", md: "flex-start" }}
