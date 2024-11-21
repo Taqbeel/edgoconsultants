@@ -30,7 +30,7 @@ Chakra UI - A simple, modular, and accessible component library for React.
 
 ## Acknowledgments
 
-A special thanks to Mr. Nilesh Mishra for giving me the opportunity to work on this project.
+A special thanks to Mr. Khalid Munawar for giving me the opportunity to work on this project.
 
 ## Live Website
 

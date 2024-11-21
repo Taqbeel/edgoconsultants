@@ -26,7 +26,7 @@ import NavDrawer from "./Drawer";
 
 const NavPages = [
   { _id: 1, title: "Home", link: "/", icon: <AiOutlineHome /> },
-  { _id: 2, title: "Meet Our Experts", link: "/mentor", icon: <AiOutlineInfo /> },
+  { _id: 2, title: "Meet Our Experts", link: "/meet-our-experts", icon: <AiOutlineInfo /> },
   { _id: 3, title: "About Us", link: "/about", icon: <AiOutlineInfo /> },
   { _id: 4, title: "Contacts", link: "/contacts", icon: <AiOutlinePhone /> },
 ];

@@ -10,16 +10,15 @@ import {
 import Head from "next/head";
 
 
-const index = ({ testimonials }) => {
+const index = () => {
   const title =
-    "Edgo Consultants | Rise by Lifting Others! Apply to Dream Universities with Expert Guidance and Support for Free";
+    "Edgo Consultants | Pursue Your Ambitions";
   const description =
-    "Get expert guidance and support from accomplished alumni and current students to apply to your dream universities for free. Rise by lifting others with personalized guidance on study abroad, personal growth, and more.";
+    "We turn your academic dreams into reality with expert guidance.";
   const url = "https://www.EdgoConsultants.com";
-  const image = `${process.env.ENDPOINT}/home.jpg`;
 
   const keywords =
-    "study abroad, personal guidance, free guidance, free counseling, free courses, expert guidance, support, alumni, current students, dream universities, apply, rise, lifting others, personal growth.";
+    "edgo, edgo consultants, study abroad, personal guidance, free guidance, free counseling, free courses, expert guidance, support, alumni, current students, dream universities, apply, rise, lifting others, personal growth.";
   const twitterHandle = "@EdgoConsultants";
 
   return (
@@ -33,7 +32,6 @@ const index = ({ testimonials }) => {
 
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
-        <meta property="og:image" content={image} />
         <meta property="og:url" content={url} />
         <meta property="og:type" content="website" />
 
@@ -41,7 +39,6 @@ const index = ({ testimonials }) => {
         <meta name="twitter:site" content={twitterHandle} />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
-        <meta name="twitter:image" content={image} />
       </Head>
       <Hero />
       <UniversityCarausel />

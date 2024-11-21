@@ -67,13 +67,13 @@ const mentors = [
 
 
 const Mentor = () => {
-  const title = "Our Mentor | Leap Admission";
+  const title = "Our Mentor | Edgo Consultants";
   const description =
-    "Meet Nilesh Mishra, Your Admission Guru | Leap Admission | Get expert guidance on studying abroad from Nilesh Mishra, your dedicated admission guru. With a GRE score of 316 and a master's degree in business analytics and project management from the University of Connecticut, Nilesh can help you navigate the admission process and secure scholarships. Contact Leap Admission today to schedule a consultation.";
+    "Meet Khalid Munawar, Your Admission Guru | Edgo Consultants | Get expert guidance on studying abroad from Khalid Munawar, your dedicated admission guru. With a GRE score of 316 and a master's degree in business analytics and project management from the University of Connecticut, Khalid can help you navigate the admission process and secure scholarships. Contact Edgo Consultants today to schedule a consultation.";
   const image =
     "https://res.cloudinary.com/dltkycv3q/image/upload/v1676790441/Nilesh_Photo_tysumx.jpg";
   const keywords =
-    "study abroad, admission guru, Nilesh Mishra, GRE, scholarships, University of Connecticut, business analytics, project management";
+    "study abroad, admission guru, Khalid Munawar, GRE, scholarships, University of Connecticut, business analytics, project management";
   const url = "https://www.EdgoConsultants.com/mentor";
   const twitterHandle = "@EdgoConsultants";
 

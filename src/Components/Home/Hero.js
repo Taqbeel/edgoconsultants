@@ -76,7 +76,7 @@ const Hero = () => {
                 &nbsp; Request A Free Consultation Call
               </Button>
             </Link>
-            <Link href="/mentor">
+            <Link href="/meet-our-experts">
               <Button
                 fontWeight={"regular"}
                 // backgroundColor='#173540'
