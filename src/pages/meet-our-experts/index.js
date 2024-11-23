@@ -1,5 +1,5 @@
 import { CallBack, Mentors, Testimonial } from "@/Components";
-import { Box, Flex, Image, Text } from "@chakra-ui/react";
+import { Box, Center, Flex, Image, Text } from "@chakra-ui/react";
 import { keyframes } from "@emotion/react";
 import Head from "next/head";
 import { useEffect, useRef, useState } from "react";
@@ -26,7 +26,7 @@ const mentors = [
     img: 'Bakr',
     flag: 2,
     cntr: 'UK',
-    desc: 'Muhammad Abu Bakar is the Manager Operations for EDGO in London, driving strategic operations and strengthening the firm&lsquo;s presence in the UK. An LLM graduate from Dundee University with a background in civil, criminal, and family law, he combines his legal expertise with a passion for guiding students. Having navigated the international education process himself, Muhammad understands the unique needs and aspirations of students. He excels in helping them identify universities that align with their goals and enhance their skills, ensuring a smooth and supportive journey. Fluent in English and Urdu, he is dedicated to providing exceptional service to a diverse clientele.'
+    desc: 'Muhammad Abu Bakar is the Manager Operations for EDGO in London, driving strategic operations and strengthening the firm\'s presence in the UK. An LLM graduate from Dundee University with a background in civil, criminal, and family law, he combines his legal expertise with a passion for guiding students. Having navigated the international education process himself, Muhammad understands the unique needs and aspirations of students. He excels in helping them identify universities that align with their goals and enhance their skills, ensuring a smooth and supportive journey. Fluent in English and Urdu, he is dedicated to providing exceptional service to a diverse clientele.'
   },
   {
     id: 2,
@@ -158,6 +158,21 @@ const Mentor = () => {
             <Text mb={6} fontSize={{ base: "sm", md: "md" }} color="black" >
               As a CEO of Edgo Consultants, I bring over a decade of experience in navigating the complex world of international admissions and visa applications. My journey has been dedicated to guiding students towards achieving their academic dreams by securing admissions in top universities abroad. With a deep understanding of the process and a passion for excellence, I strive to ensure every student’s success through personalized and professional support.
             </Text>
+
+            <Center
+              className="element"
+              h={["25px", "30px", "60px"]}
+              w={["60px", "40px", "100px"]}
+              borderRadius="md"
+              bgSize="cover"
+              bgPosition="center"
+              bgImage={require(`../../Assets/Images/Flags/12.svg`).default.src}
+              sx={{
+                // animation: "waveAnimation 1.5s infinite ease-in-out",
+                animation: "shadow",
+                transformOrigin: "left center",
+              }}
+            ></Center>
             {/* <Link href="https://wa.me/+929821380110">
               <Button bg="#173540" size="md" leftIcon={<FaWhatsapp />}>
                 WhatsApp
@@ -171,10 +186,10 @@ const Mentor = () => {
           </Box>
 
           <Image
-            src="https://www.pngitem.com/pimgs/m/632-6321389_random-png-transparent-background-random-image-png-png.png"
-            alt="Khalid"
+            src={require(`../../Assets/Images/Team/Khalid.jpg`).default.src}
+            alt='Khalid'
             w={{ base: "100%", md: "auto" }}
-            h={{ base: "auto", md: "250px" }}
+            h={{ base: "auto", md: "300px" }}
             objectFit="cover"
             rounded="md"
             shadow="md"
