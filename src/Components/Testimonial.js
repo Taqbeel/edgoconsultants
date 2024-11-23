@@ -91,7 +91,7 @@ const Testimonial = () => {
         swipeable
       >
         {cTestimonials?.map((tsm) => (
-          <Box p="4" key={tsm._id} h={["35vh"]}>
+          <Box p="4" key={tsm._id} h={["36vh"]}>
             <Flex
               justifyContent={"space-between"}
               flexDir="column"
@@ -111,7 +111,7 @@ const Testimonial = () => {
               >
                 <Avatar src={tsm.avatarURL} alt={tsm.author} border="2px" />
                 <Box>
-                  <Text fontSize={"16"} textColor="whiteAlpha.800">
+                  <Text fontSize={"1rem"} textColor="whiteAlpha.800">
                     {tsm.author}
                   </Text>
                   <Text fontSize={"10"} textColor="whiteAlpha.600">
