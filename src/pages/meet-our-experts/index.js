@@ -1,5 +1,5 @@
 import { CallBack, Mentors, Testimonial } from "@/Components";
-import { Box, Center, Flex, Image, Text } from "@chakra-ui/react";
+import { Box, Flex, Image, Text } from "@chakra-ui/react";
 import { keyframes } from "@emotion/react";
 import Head from "next/head";
 import { useEffect, useRef, useState } from "react";
@@ -159,7 +159,7 @@ const Mentor = () => {
               As a CEO of Edgo Consultants, I bring over a decade of experience in navigating the complex world of international admissions and visa applications. My journey has been dedicated to guiding students towards achieving their academic dreams by securing admissions in top universities abroad. With a deep understanding of the process and a passion for excellence, I strive to ensure every student’s success through personalized and professional support.
             </Text>
 
-            <Center
+            {/* <Center
               className="element"
               h={["25px", "30px", "60px"]}
               w={["60px", "40px", "100px"]}
@@ -172,7 +172,7 @@ const Mentor = () => {
                 animation: "shadow",
                 transformOrigin: "left center",
               }}
-            ></Center>
+            ></Center> */}
             {/* <Link href="https://wa.me/+929821380110">
               <Button bg="#173540" size="md" leftIcon={<FaWhatsapp />}>
                 WhatsApp
