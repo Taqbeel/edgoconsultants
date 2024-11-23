@@ -71,27 +71,6 @@ const Feature = ({ index, title, text, icon }) => {
   const cardsRef = useRef(null);
 
   useEffect(() => {
-    // const observer = new IntersectionObserver(
-    //   (entries) => {
-    //     entries.forEach((entry) => {
-    //       if (entry.isIntersecting) {
-    //         setIsVisible(true);
-    //       }
-    //     });
-    //   },
-    //   { threshold: 0.1 }
-    // );
-
-
-    // if (cardsRef.current) {
-    //   observer.observe(cardsRef.current);
-    // }
-
-    // return () => {
-    //   if (cardsRef.current) {
-    //     observer.unobserve(cardsRef.current);
-    //   }
-    // };
 
     const checkVisibility = () => {
       if (cardsRef.current) {

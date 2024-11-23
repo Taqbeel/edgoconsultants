@@ -1,9 +1,60 @@
 import { Box, Flex, Icon, SimpleGrid, Stack, Text } from "@chakra-ui/react";
+import { keyframes } from "@emotion/react";
+import { useEffect, useRef, useState } from "react";
 import { FcAcceptDatabase, FcApproval, FcCalendar } from "react-icons/fc";
 
-const Feature = ({ title, text, icon }) => {
+
+
+const slideIn = keyframes`
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+`;
+
+const slideIn1Animation = `${slideIn} 1s ease-in`;
+const slideIn2Animation = `${slideIn} 1.5s ease-in`;
+const slideIn3Animation = `${slideIn} 2s ease-in`;
+
+const Feature = ({ index, title, text, icon }) => {
+
+  const [isVisible, setIsVisible] = useState(false);
+  const cardsRef = useRef(null);
+
+  useEffect(() => {
+
+    const checkVisibility = () => {
+      if (cardsRef.current) {
+        const rect = cardsRef.current.getBoundingClientRect();
+        console.log("Bounding Rect:", rect);
+        if (rect.top >= 0 && rect.bottom <= window.innerHeight * 1.6) {
+          setIsVisible(true);
+        }
+      }
+    };
+
+    // Attach to scroll and resize events
+    window.addEventListener("scroll", checkVisibility);
+    window.addEventListener("resize", checkVisibility);
+
+    checkVisibility(); // Check immediately
+
+    return () => {
+      window.removeEventListener("scroll", checkVisibility);
+      window.removeEventListener("resize", checkVisibility);
+    };
+  }, []);
+
   return (
-    <Stack bg="gray.50" p="5" borderRadius={"md"}>
+    <Stack bg="gray.50" p="5" borderRadius={"md"}
+      ref={cardsRef}
+      animation={!isVisible ? 'none' : index === 1 ? slideIn1Animation : index === 2 ? slideIn2Animation : slideIn3Animation}
+      style={{ animationDelay: "0.3s" }}
+    >
       <Flex
         w={16}
         h={16}
@@ -27,6 +78,7 @@ export default function Services() {
     <Box p={4} py="16">
       <SimpleGrid columns={{ base: 1, md: 3 }} spacing={10}>
         <Feature
+          index={1}
           icon={<Icon as={FcApproval} w={10} h={10} />}
           title={"Consultation"}
           text={
@@ -34,6 +86,7 @@ export default function Services() {
           }
         />
         <Feature
+          index={2}
           icon={<Icon as={FcAcceptDatabase} w={10} h={10} />}
           title={"Application"}
           text={
@@ -41,6 +94,7 @@ export default function Services() {
           }
         />
         <Feature
+          index={3}
           icon={<Icon as={FcCalendar} w={10} h={10} />}
           title={"Admissions"}
           text={
