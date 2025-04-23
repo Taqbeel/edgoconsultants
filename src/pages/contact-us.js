@@ -1,5 +1,6 @@
 import { Images } from "@/Constants";
 import { options } from "@/Constants/Images";
+import { sendEmail } from "@/server/mail";
 import {
   Box,
   Button,
@@ -29,7 +30,6 @@ import {
   FaPhone,
   FaUser,
 } from "react-icons/fa";
-import { sendEmail } from "./server/mail";
 
 const Contacts = () => {
   const [isLoading, setIsLoading] = useState(false);

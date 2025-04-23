@@ -1,6 +1,6 @@
 import { Images } from "@/Constants";
 import { options } from "@/Constants/Images";
-import { sendEmail } from "@/pages/server/mail";
+import { sendEmail } from "@/server/mail";
 import {
   Box,
   Button,
