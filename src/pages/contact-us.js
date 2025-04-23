@@ -11,61 +11,25 @@ import {
   InputLeftElement,
   Stack,
   Text,
-  Textarea
+  Textarea,
 } from "@chakra-ui/react";
 import { Select } from "chakra-react-select";
 import Head from "next/head";
 import { useState } from "react";
 import {
-  AiOutlineFacebook,
-  AiOutlineInstagram,
-  AiOutlineLinkedin,
   AiOutlineMail,
   AiOutlinePhone,
-  AiOutlineTwitter,
   AiOutlineWhatsApp,
-  AiOutlineYoutube,
 } from "react-icons/ai";
 import { BiGlobe } from "react-icons/bi";
 import {
   FaCheckCircle,
   FaEnvelope,
+  FaExclamationTriangle,
   FaPhone,
-  FaUser
+  FaUser,
 } from "react-icons/fa";
-
-const socialLink = [
-  {
-    link: "https://facebook.com/EdgoConsultants",
-    icon: <AiOutlineFacebook size={30} />,
-    colorScheme: "facebook",
-  },
-  {
-    link: "https://instagram.com/EdgoConsultants",
-    icon: <AiOutlineInstagram size={30} />,
-    colorScheme: "purple",
-  },
-  {
-    link: "https://twitter.com/EdgoConsultants",
-    icon: <AiOutlineTwitter size={30} />,
-    colorScheme: "twitter",
-  },
-  {
-    link: "https://youtube.com/EdgoConsultants",
-    icon: <AiOutlineYoutube size={30} />,
-    colorScheme: "red",
-  },
-  {
-    link: "https://wa.me/+17328616559",
-    icon: <AiOutlineWhatsApp size={30} />,
-    colorScheme: "whatsapp",
-  },
-  {
-    link: "https://linkedin.com/company/EdgoConsultants",
-    icon: <AiOutlineLinkedin size={30} />,
-    colorScheme: "linkedin",
-  },
-];
+import { sendEmail } from "./server/mail";
 
 const Contacts = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -73,34 +37,37 @@ const Contacts = () => {
   const [status, setStatus] = useState(null);
 
   const submitForm = async (e) => {
-    // e.preventDefault();
-    // setIsLoading(true);
-    // setError("");
-    // const { name, email, phone, message } = e.target;
-    // const callBackData = {
-    //   name: name.value,
-    //   email: email.value,
-    //   phone: phone.value,
-    //   message: message.value,
-    // };
+    e.preventDefault();
+    setIsLoading(true);
+    setError("");
+    const { country, name, email, phone, message } = e.target;
+    const callBackData = {
+      country: country.value,
+      name: name.value,
+      email: email.value,
+      phone: phone.value,
+      message: message.value,
+    };
 
-    // try {
-    //   const { data } = await axios.post(
-    //     `${AppConfig.API_ENDPOINT}/contact`,
-    //     callBackData
-    //   );
-    //   console.log(data);
-    //   setIsLoading(false);
-    //   setStatus("success");
-    // } catch (error) {
-    //   console.log(error);
-    //   setError(
-    //     <>
-    //       <FaExclamationTriangle /> {error?.response?.data?.error}
-    //     </>
-    //   );
-    //   setIsLoading(false);
-    // }
+
+    try {
+      const res = await sendEmail(callBackData);
+
+      if (res) {
+        setStatus("success");
+      } else {
+        setError("There was an issue with sending email. Please try again");
+      }
+      setIsLoading(false);
+    } catch (error) {
+      console.log(error);
+      setError(
+        <>
+          <FaExclamationTriangle /> {error?.response?.data?.error}
+        </>
+      );
+      setIsLoading(false);
+    }
   };
 
   const title = "Contact Us | Edgo Consultants";
@@ -136,7 +103,7 @@ const Contacts = () => {
       </Head>
       <Flex flexDir={["column", "column", "row"]}>
         <Flex
-          bg='#F89601'
+          bg="#F89601"
           flex="1"
           px="5"
           pt="16"
@@ -174,7 +141,7 @@ const Contacts = () => {
                   <AiOutlineMail size={20} />
                 </Center>
                 <Text color={"white"} fontSize="14">
-                  contact@EdgoConsultants.com
+                  info@edgoconsultants.com
                 </Text>
               </Flex>
 
@@ -242,7 +209,7 @@ const Contacts = () => {
                 <Flex color="red" fontSize={[14]} alignItems="center" gap="1">
                   {error}
                 </Flex>
-                <InputGroup background="white" position='relative' zIndex={1}>
+                <InputGroup background="white" position="relative" zIndex={1}>
                   <Select
                     options={options}
                     placeholder={
@@ -251,14 +218,14 @@ const Contacts = () => {
                         Preferred Country
                       </Flex>
                     }
-                    name="preferred_country"
+                    name="country"
                     closeMenuOnSelect
                     isSearchable={false}
                     chakraStyles={{
                       container: (provided) => ({
                         ...provided,
                         width: "100%",
-                        zIndex: 1, // Ensure the dropdown container has a proper z-index
+                        zIndex: 1,
                       }),
                       menu: (provided) => ({
                         ...provided,
@@ -326,8 +293,8 @@ const Contacts = () => {
                     isLoading={isLoading}
                     type="submit"
                     w="40%"
-                    backgroundColor='#F89601'
-                    color='white'
+                    backgroundColor="#F89601"
+                    color="white"
                   >
                     Submit
                   </Button>
@@ -337,28 +304,6 @@ const Contacts = () => {
           )}
         </Flex>
       </Flex>
-
-      {/* <Box py="16">
-        <Text
-          as="h3"
-          color="gray.800"
-          fontSize={[20, 24, 28]}
-          fontWeight={"bold"}
-          align="center"
-          mb="5"
-        >
-          Follow us on
-        </Text>
-        <Center gap={2}>
-          {socialLink?.map((sl) => (
-            <Link href={sl.link} target="_blank" key={sl.link}>
-              <IconButton colorScheme={sl.colorScheme} rounded={"sm"} size="md">
-                {sl.icon}
-              </IconButton>
-            </Link>
-          ))}
-        </Center>
-      </Box> */}
     </Box>
   );
 };

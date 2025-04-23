@@ -1,5 +1,6 @@
 import { Images } from "@/Constants";
 import { options } from "@/Constants/Images";
+import { sendEmail } from "@/pages/server/mail";
 import {
   Box,
   Button,
@@ -20,6 +21,7 @@ import { BiGlobe } from "react-icons/bi";
 import {
   FaCheckCircle,
   FaEnvelope,
+  FaExclamationTriangle,
   FaPhone,
   FaUser
 } from "react-icons/fa";
@@ -86,34 +88,37 @@ const CallBack = () => {
   }, []);
 
   const submitForm = async (e) => {
-    // e.preventDefault();
-    // setIsLoading(true);
-    // setError("");
-    // const { name, email, phone, message } = e.target;
-    // const callBackData = {
-    //   name: name.value,
-    //   email: email.value,
-    //   phone: phone.value,
-    //   message: message.value,
-    // };
+    e.preventDefault();
+    setIsLoading(true);
+    setError("");
+    const { country, name, email, phone, message } = e.target;
+    const callBackData = {
+      country: country.value,
+      name: name.value,
+      email: email.value,
+      phone: phone.value,
+      message: message.value,
+    };
 
-    // try {
-    //   const { data } = await axios.post(
-    //     `${AppConfig.API_ENDPOINT}/callback`,
-    //     callBackData
-    //   );
-    //   console.log(data);
-    //   setIsLoading(false);
-    //   setStatus("success");
-    // } catch (error) {
-    //   setError(
-    //     <>
-    //       <FaExclamationTriangle /> {error?.response?.data?.error}
-    //     </>
-    //   );
-    //   setIsLoading(false);
-    //   console.log(error?.response?.data);
-    // }
+
+    try {
+      const res = await sendEmail(callBackData);
+
+      if (res) {
+        setStatus("success");
+      } else {
+        setError("There was an issue with sending email. Please try again");
+      }
+      setIsLoading(false);
+    } catch (error) {
+      console.log(error);
+      setError(
+        <>
+          <FaExclamationTriangle /> {error?.response?.data?.error}
+        </>
+      );
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -211,7 +216,7 @@ const CallBack = () => {
                         Preferred Country
                       </Flex>
                     }
-                    name="preferred_country"
+                    name="country"
                     closeMenuOnSelect
                     isSearchable={false}
                     chakraStyles={{
