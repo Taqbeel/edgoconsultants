@@ -14,7 +14,7 @@ export const Images = {
 
   UNIVERSITIES: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
 
-  FLAG: ['USA', 'UK', 'Australia', 'New Zealand', 'France', 'Italy', 'Belgium', 'Finland', 'Netherlands', 'China'],
+  FLAG: ['USA', 'UK', 'Australia', 'New Zealand', 'Ireland', 'Canada', 'Europe', 'China'],
   // FLAG: [1, 2, 3, 4,],
 
   // OUR_STORY: require("../Assets/Images/ourStory.jpg"),
@@ -96,89 +96,51 @@ export const options = [
       </Flex>
     ),
   },
-
-
   {
-    value: "France",
+    value: "Ireland",
     label: (
       <Flex align="center" gap="2">
         <Box
           as="span"
-          bgImage="url('https://flagcdn.com/fr.svg')"
+          bgImage="url('https://flagcdn.com/ie.svg')"
           bgSize="cover"
           bgPosition="center"
           borderRadius="full"
           boxSize="20px"
         ></Box>
-        France
+        Ireland
       </Flex>
     ),
   },
   {
-    value: "Italy",
+    value: "Canada",
     label: (
       <Flex align="center" gap="2">
         <Box
           as="span"
-          bgImage="url('https://flagcdn.com/it.svg')"
+          bgImage="url('https://flagcdn.com/ca.svg')"
           bgSize="cover"
           bgPosition="center"
           borderRadius="full"
           boxSize="20px"
         ></Box>
-        Italy
-      </Flex>
-    ),
-  },
-
-
-  {
-    value: "Belgium",
-    label: (
-      <Flex align="center" gap="2">
-        <Box
-          as="span"
-          bgImage="url('https://flagcdn.com/bl.svg')"
-          bgSize="cover"
-          bgPosition="center"
-          borderRadius="full"
-          boxSize="20px"
-        ></Box>
-        Belgium
+        Canada
       </Flex>
     ),
   },
   {
-    value: "Finland",
+    value: "Europe",
     label: (
       <Flex align="center" gap="2">
         <Box
           as="span"
-          bgImage="url('https://flagcdn.com/fi.svg')"
+          bgImage="url('https://flagcdn.com/eu.svg')"
           bgSize="cover"
           bgPosition="center"
           borderRadius="full"
           boxSize="20px"
         ></Box>
-        Finland
-      </Flex>
-    ),
-  },
-
-
-  {
-    value: "Netherlands",
-    label: (
-      <Flex align="center" gap="2">
-        <Box
-          as="span"
-          bgImage="url('https://flagcdn.com/nl.svg')"
-          bgSize="cover"
-          bgPosition="center"
-          borderRadius="full"
-          boxSize="20px"
-        ></Box>
-        Netherlands
+        Europe
       </Flex>
     ),
   },

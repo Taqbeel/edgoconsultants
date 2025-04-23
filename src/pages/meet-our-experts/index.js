@@ -1,4 +1,4 @@
-import { CallBack, Mentors, Testimonial } from "@/Components";
+import { CallBack, Mentors } from "@/Components";
 import { Box, Flex, Image, Text } from "@chakra-ui/react";
 import { keyframes } from "@emotion/react";
 import Head from "next/head";
@@ -32,7 +32,7 @@ const mentors = [
     id: 2,
     name: 'Muhammad Ibrar',
     img: 'Ibrar',
-    flag: 11,
+    flag: 7,
     cntr: 'Europe',
     desc: 'Muhammad Ibrar Our Manager Operations for Europe is an expert in navigating the diverse education systems across European countries. His insights have empowered countless students to embark on successful academic journeys in Europe.'
   },
@@ -142,7 +142,8 @@ const Mentor = () => {
           px={6}
           p={8}
           borderRadius={8}
-          _hover={{ background: "#F89601", color: 'white' }}
+          role='group'
+          _hover={{ background: "#F89601", }}
         >
           <Box flexShrink={0}></Box>
           <Box mt={{ base: 6, md: 0 }} ml={{ md: 6 }}>
@@ -152,37 +153,15 @@ const Mentor = () => {
               fontSize={{ base: "2xl", md: "3xl" }}
               color="gray.700"
               as={"h1"}
+              _groupHover={{ color: "white" }}
             >
               Khalid Munawar -Message From CEO
             </Text>
-            <Text mb={6} fontSize={{ base: "sm", md: "md" }} color="black" >
+            <Text mb={6} fontSize={{ base: "sm", md: "md" }} color="black"
+              _groupHover={{ color: "white" }}>
               As a CEO of Edgo Consultants, I bring over a decade of experience in navigating the complex world of international admissions and visa applications. My journey has been dedicated to guiding students towards achieving their academic dreams by securing admissions in top universities abroad. With a deep understanding of the process and a passion for excellence, I strive to ensure every student’s success through personalized and professional support.
             </Text>
 
-            {/* <Center
-              className="element"
-              h={["25px", "30px", "60px"]}
-              w={["60px", "40px", "100px"]}
-              borderRadius="md"
-              bgSize="cover"
-              bgPosition="center"
-              bgImage={require(`../../Assets/Images/Flags/12.svg`).default.src}
-              sx={{
-                // animation: "waveAnimation 1.5s infinite ease-in-out",
-                animation: "shadow",
-                transformOrigin: "left center",
-              }}
-            ></Center> */}
-            {/* <Link href="https://wa.me/+929821380110">
-              <Button bg="#173540" size="md" leftIcon={<FaWhatsapp />}>
-                WhatsApp
-              </Button>
-            </Link>
-            <Link href="tel:+929821380110">
-              <Button ml={4} size="md">
-                Contact
-              </Button>
-            </Link> */}
           </Box>
 
           <Image
@@ -205,9 +184,7 @@ const Mentor = () => {
       </Flex>
       {/* <HowWeWork /> */}
       <CallBack />
-      <br />
-      <br />
-      <Testimonial type="static" />
+      {/* <Testimonial type="static" /> */}
     </>
   );
 };

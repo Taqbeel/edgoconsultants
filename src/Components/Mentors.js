@@ -61,7 +61,8 @@ const Mentors = ({ name, img, flag, cntr, desc }) => {
       px={6}
       p={8}
       borderRadius={8}
-      _hover={{ background: "#173540" }}
+      role="group"
+      _hover={{ background: "#173540", }}
     >
       <Box flexShrink={0}>
         <Image
@@ -82,6 +83,7 @@ const Mentors = ({ name, img, flag, cntr, desc }) => {
           fontSize={{ base: "2xl", md: "3xl" }}
           color="gray.700"
           as={"h1"}
+          _groupHover={{ color: "white" }}
         >
           {name} -Manager Operations {cntr}
         </Text>
@@ -100,7 +102,8 @@ const Mentors = ({ name, img, flag, cntr, desc }) => {
           }}
         ></Center>
 
-        <Text mt={6} fontSize={{ base: "sm", md: "md" }} color="black">
+        <Text mt={6} fontSize={{ base: "sm", md: "md" }} color="black"
+          _groupHover={{ color: "white" }}>
           {desc}
         </Text>
       </Box>

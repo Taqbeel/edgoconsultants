@@ -1,4 +1,4 @@
-import { Features, Services, Testimonial, WhyChooseUs } from "@/Components";
+import { Features, Services } from "@/Components";
 import { Images } from "@/Constants";
 import {
   Box,
@@ -162,7 +162,7 @@ export default function About() {
     "Learn more about Edgo Consultants and our mission to help students apply to their dream universities with expert guidance and support from accomplished alumni and current students. Discover our free personalized counseling and courses today.";
   const keywords =
     "study abroad, personal guidance, free guidance, free counseling, free courses, apply to universities";
-  const url = "https://www.EdgoConsultants.com/contacts";
+  const url = "https://www.EdgoConsultants.com/contact-us";
 
   const image = `${process.env.ENDPOINT}/home.jpg`;
 
@@ -314,10 +314,10 @@ export default function About() {
         </SimpleGrid>
 
       </Box>
-      <WhyChooseUs />
+      {/* <WhyChooseUs /> */}
       <Features />
       <Services />
-      <Testimonial type="static" />
+      {/* <Testimonial type="static" /> */}
     </div>
   );
 }

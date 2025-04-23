@@ -60,8 +60,10 @@ const Hero = () => {
             Pursue Your Ambitions
             <br /> <span style={{ color: "#F89601" }}>With Us</span>
           </Heading>
-          <Text fontSize={[16, 16, 34]} color={"gray.500"}>
-            We turn your academic dreams into reality with expert guidance.
+          <Text fontSize={[16, 16, 28]} color={"gray.500"}>
+            Through partners we can process applications to most UK universities
+            including the majority of the Russell Group (top universities) as well
+            as many in Canada, the US, Australia, New Zealand, and Ireland.
           </Text>
           <Flex gap="2" justifyContent={["center", "left"]} mt="2">
             <Link href={"#callback"}>

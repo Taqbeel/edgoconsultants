@@ -2,10 +2,7 @@ import {
   CallBack,
   Features,
   Hero,
-  Services,
-  Testimonial,
-  UniversityCarausel,
-  WhyChooseUs,
+  Services
 } from "@/Components";
 import Head from "next/head";
 
@@ -41,12 +38,12 @@ const index = () => {
         <meta name="twitter:description" content={description} />
       </Head>
       <Hero />
-      <UniversityCarausel />
+      {/* <UniversityCarausel /> */}
       <CallBack />
-      <WhyChooseUs />
+      {/* <WhyChooseUs /> */}
       <Features />
       <Services />
-      <Testimonial type="static" />
+      {/* <Testimonial type="static" /> */}
     </>
   );
 };
