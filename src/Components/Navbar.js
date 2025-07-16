@@ -285,12 +285,12 @@ const Navbar = () => {
           ))}
         </Box>
         <Center justifyContent={"flex-end"} gap="2">
-          <Link href="tel:+1-860-209-8792">
+          <Link href="tel:+923139320255">
             <Button backgroundColor="#F89601" h="10">
               <RiPhoneFill size="20" color='white' />
             </Button>
           </Link>
-          <Link href="tel:+1-860-209-8792">
+          <Link href="https://wa.me/message/YHU457VGSDQ2D1" target='_blank'>
             <Button backgroundColor="#173540" h="10">
               <FaWhatsapp size="20" color='white' />
             </Button>

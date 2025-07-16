@@ -76,10 +76,10 @@ export default function Footer() {
         >
           <Text>© 2022 Edgo Consultants. All rights reserved</Text>
           <Stack direction={"row"} spacing={6}>
-            <SocialButton label={"Twitter"} href={"https://www.facebook.com/share/1AJjyFt5ev/?mibextid=wwXIfr"}>
+            <SocialButton label={"Facebook"} href={"https://web.facebook.com/edgoconsultants/"}>
               <FaFacebook />
             </SocialButton>
-            <SocialButton label={"YouTube"} href={"https://youtube.com/@khalid_munawar?feature=shared"}>
+            <SocialButton label={"YouTube"} href={"https://www.youtube.com/@edgoconsultants"}>
               <FaYoutube />
             </SocialButton>
             <SocialButton label={"Instagram"} href={"https://www.instagram.com/edgoconsultants?igsh=MW1ya2o0bm5hcW9mbQ%3D%3D&utm_source=qr"}>
