@@ -16,6 +16,7 @@ import {
 } from "@chakra-ui/react";
 import { Select } from "chakra-react-select";
 import Head from "next/head";
+import Link from "next/link";
 import { useState } from "react";
 import {
   AiOutlineMail,
@@ -140,27 +141,33 @@ const Contacts = () => {
                 <Center h="10" w="10" bg="white">
                   <AiOutlineMail size={20} />
                 </Center>
-                <Text color={"white"} fontSize="14">
-                  info@edgoconsultants.com
-                </Text>
+                <Link href="mailto:info@edgoconsultants.com">
+                  <Text color={"white"} fontSize="14">
+                    info@edgoconsultants.com
+                  </Text>
+                </Link>
               </Flex>
 
               <Flex alignItems={"center"} gap="2" bg="teal.900">
                 <Center h="10" w="10" bg="white">
                   <AiOutlinePhone size={20} />
                 </Center>
-                <Text color={"white"} fontSize="14">
-                  +1-860-209-8792
-                </Text>
+                <Link href="tel:+92518485322">
+                  <Text color={"white"} fontSize="14">
+                    +92-51-8485322
+                  </Text>
+                </Link>
               </Flex>
 
               <Flex alignItems={"center"} gap="2" bg="teal.900">
                 <Center h="10" w="10" bg="white">
                   <AiOutlineWhatsApp size={20} />
                 </Center>
-                <Text color={"white"} fontSize="14">
-                  +1 732-861-6559
-                </Text>
+                <Link href="https://wa.me/message/YHU457VGSDQ2D1" target='_blank'>
+                  <Text color={"white"} fontSize="14">
+                    +92-313-932-0255
+                  </Text>
+                </Link>
               </Flex>
             </Stack>
           </Box>
